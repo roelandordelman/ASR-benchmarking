@@ -65,6 +65,22 @@ def resolve_audio_dir(corpus: Path) -> Optional[Path]:
     return None
 
 
+def try_fetch_audio(corpus: Path) -> Optional[Path]:
+    """Attempt SFTP fetch if corpus.yaml has sftp config and audio is missing."""
+    meta = load_yaml(corpus / "corpus.yaml")
+    if not meta.get("sftp"):
+        return None
+    print(f"  → Audio not found locally — attempting SFTP fetch for {corpus.name}")
+    result = subprocess.run(
+        [sys.executable, "scripts/fetch_corpus.py", corpus.name],
+        check=False,
+    )
+    if result.returncode != 0:
+        print(f"  [warn] SFTP fetch failed — to request access: {meta.get('contact', 'see corpus.yaml')}")
+        return None
+    return resolve_audio_dir(corpus)
+
+
 def run_asr(system: Path, audio_dir: Path, work_dir: Path) -> Path:
     ctm_path = work_dir / "hyp.ctm"
     run_script = system / "run.py"
@@ -158,6 +174,8 @@ def main():
                 shutil.copy(precomputed, work_dir / "hyp.ctm")
             else:
                 audio_dir = resolve_audio_dir(corpus)
+                if audio_dir is None:
+                    audio_dir = try_fetch_audio(corpus)
                 if audio_dir is None:
                     print(f"  [skip] audio not found — set ASR_CORPUS_ROOT or add corpora/{corpus.name}/audio/")
                     continue

@@ -1,0 +1,6 @@
+[core]
+    remote = hetzner
+['remote "hetzner"']
+    url = ssh://u540409.your-storagebox.de/asr-benchmark
+    port = 23
+    keyfile = /Users/roeland.ordelman/.ssh/id_hetzner_rclone
