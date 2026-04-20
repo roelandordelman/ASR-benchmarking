@@ -1,0 +1,13 @@
+title: ASR NL Benchmark
+description: Open Dutch ASR benchmark — WER across systems and corpora
+theme: minima
+
+show_excerpts: false
+
+header_pages:
+  - index.md
+  - corpora/index.md
+  - systems/index.md
+
+minima:
+  skin: classic

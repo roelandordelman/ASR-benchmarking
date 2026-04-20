@@ -1,0 +1,144 @@
+NIST_TEXT_ALIGNMENT
+VERSION 0.1
+
+
+		DUMP OF SYSTEM ALIGNMENT STRUCTURE
+
+System name:   /input/hyp_normalized_variations.ctm
+Ref file:      /input/reference_normalized_variations.stm
+Hyp file:      /input/hyp_normalized_variations.ctm
+Creation date: "Mon Apr 20 11:13:47 2026"
+Optionally Deletable Flag Set
+
+Speaker Count: 1
+Speakers: 
+    0:  test_spk
+
+
+Speaker sentences   0:  test_spk   utt# 0 of 9
+id: (test_spk-000)
+Labels: <o,f0,m>
+File: test_file
+Channel: 1
+Scores: (#C #S #D #I) 43 2 1 1
+Ref times: t1= 0.50 t2= 15.16
+REF:  de      nederlandse spoorwegen en      schiphol toch    twee    gevoelige dossiers op      het     ********* VERKEERSGEBIED zitten  in      het     nieuwe  kabinet in      de      portefeuille van     de      minister van     verkeer en      waterstaat U       HOORDE  hem     zojuist al      camiel  eurlings in      het     net     opgestapte kabinet vielen  deze    dossiers nog     onder   het     staatssecretariaat 
+HYP:  de      nederlandse spoorwegen en      schiphol toch    twee    gevoelige dossiers op      het     VERKEERDE GEBIED         zitten  in      het     nieuwe  kabinet in      de      portefeuille van     de      minister van     verkeer en      waterstaat *       WORDEN  hem     zojuist al      camiel  eurlings in      het     net     opgestapte kabinet vielen  deze    dossiers nog     onder   het     staatssecretariaat 
+H_T1: 0.72    0.84        1.20       1.74    1.86     2.31    2.58    2.79      3.33     3.81    3.93    4.02      4.47           5.16    5.46    5.61    5.70    6.00    6.45    6.57    6.63         7.17    7.32    7.41     8.16    8.40    8.70    8.82               9.48    9.72    9.80    10.20   10.32   10.65    11.40   11.52   11.61   11.79      12.27   12.72   12.96   13.23    13.62   13.83   14.04   14.16              
+H_T2: 0.84    1.20        1.74       1.86    2.31     2.58    2.79    3.33      3.81     3.93    4.02    4.47      4.83           5.46    5.61    5.70    6.00    6.45    6.57    6.63    7.17         7.32    7.41    8.01     8.40    8.70    8.82    9.42               9.71    9.80    10.20   10.32   10.65   11.04    11.52   11.61   11.79   12.27      12.72   12.96   13.23   13.62    13.83   14.04   14.16   15.12              
+CONF: 1.0000  0.9900      1.0000     0.8600  1.0000   0.9500  1.0000  1.0000    1.0000   1.0000  0.8800  0.7600    0.9900         1.0000  1.0000  0.9300  1.0000  1.0000  1.0000  1.0000  1.0000       1.0000  1.0000  1.0000   1.0000  1.0000  1.0000  1.0000             0.7600  0.3800  0.9800  0.9900  0.9700  1.0000   0.6000  0.8900  1.0000  0.9900     0.9800  1.0000  1.0000  1.0000   1.0000  1.0000  0.8600  1.0000             
+Eval:                                                                                                    I         S                                                                                                                                               D       S                                                                                                                                                               
+
+Speaker sentences   0:  test_spk   utt# 1 of 9
+id: (test_spk-001)
+Labels: <o,f0,m>
+File: test_file
+Channel: 1
+Scores: (#C #S #D #I) 24 0 0 0
+Ref times: t1= 16.20 t2= 25.20
+REF:  het     treinverkeer van     en      naar    utrecht is      sinds   half    zes     ontregeld door    een     computerstoring prorail hoopt   dat     de      problemen nog     vanavond kunnen  worden  opgelost 
+HYP:  het     treinverkeer van     en      naar    utrecht is      sinds   half    zes     ontregeld door    een     computerstoring prorail hoopt   dat     de      problemen nog     vanavond kunnen  worden  opgelost 
+H_T1: 16.28   16.43        17.06   17.33   17.48   17.72   18.38   18.65   18.98   19.25   19.49     20.15   20.36   20.45           22.09   22.72   22.93   23.08   23.14     23.62   23.74    24.22   24.43   24.61    
+H_T2: 16.43   17.06        17.33   17.48   17.72   18.23   18.62   18.98   19.25   19.49   20.12     20.36   20.45   21.53           22.72   22.93   23.08   23.14   23.62     23.74   24.22    24.43   24.61   25.15    
+CONF: 1.0000  1.0000       1.0000  1.0000  1.0000  1.0000  1.0000  1.0000  1.0000  1.0000  1.0000    1.0000  1.0000  1.0000          0.8700  0.9800  1.0000  0.9700  1.0000    1.0000  1.0000   1.0000  1.0000  1.0000   
+Eval:                                                                                                                                                                                                                    
+
+Speaker sentences   0:  test_spk   utt# 2 of 9
+id: (test_spk-002)
+Labels: <o,f0,m>
+File: test_file
+Channel: 1
+Scores: (#C #S #D #I) 34 0 0 0
+Ref times: t1= 26.24 t2= 37.81
+REF:  een     eenenveertigjarige amsterdammer heeft   ruim    honderd dagen   cel     gekregen voor    opruiing en      het     bedreigen van     premier balkenende dat     staat   gelijk  aan     de      tijd    dat     de      man     al      heeft   gezeten kreeg   ook     zes     maanden voorwaardelijk 
+HYP:  een     eenenveertigjarige amsterdammer heeft   ruim    honderd dagen   cel     gekregen voor    opruiing en      het     bedreigen van     premier balkenende dat     staat   gelijk  aan     de      tijd    dat     de      man     al      heeft   gezeten kreeg   ook     zes     maanden voorwaardelijk 
+H_T1: 26.27   26.47              27.19        27.82   28.06   28.30   28.66   28.99   29.26    29.80   30.01    30.79   30.94   31.03     31.48   31.63   31.90      32.92   33.10   33.28   33.70   33.88   33.94   34.30   34.57   34.66   34.87   34.99   35.17   36.10   36.34   36.51   36.69   36.96          
+H_T2: 26.47   27.19              27.79        28.06   28.30   28.66   28.99   29.26   29.80    29.98   30.79    30.94   31.03   31.48     31.63   31.90   32.50      33.10   33.28   33.67   33.88   33.94   34.27   34.57   34.66   34.87   34.99   35.17   35.65   36.33   36.51   36.69   36.96   37.53          
+CONF: 0.9700  1.0000             1.0000       1.0000  1.0000  1.0000  1.0000  1.0000  1.0000   1.0000  1.0000   1.0000  1.0000  1.0000    1.0000  1.0000  1.0000     1.0000  1.0000  1.0000  1.0000  0.9900  1.0000  1.0000  1.0000  1.0000  1.0000  1.0000  1.0000  0.8200  1.0000  1.0000  1.0000  1.0000         
+Eval:                                                                                                                                                                                                                                                                                                               
+
+Speaker sentences   0:  test_spk   utt# 3 of 9
+id: (test_spk-003)
+Labels: <o,f0,m>
+File: test_file
+Channel: 1
+Scores: (#C #S #D #I) 7 2 0 1
+Ref times: t1= 37.81 t2= 40.77
+REF:  HIJ     schreef op      het     internet **      OPRUIENDE columns over    balkenende 
+HYP:  EN      schreef op      het     internet OP      RUILEN    columns over    balkenende 
+H_T1: 38.01   38.13   38.41   38.52   38.61    39.00   39.12     39.51   39.93   40.14      
+H_T2: 38.13   38.40   38.52   38.61   39.00    39.12   39.51     39.93   40.14   40.77      
+CONF: 0.9800  0.6000  1.0000  0.9800  1.0000   0.6300  0.5100    1.0000  1.0000  1.0000     
+Eval: S                                        I       S                                    
+
+Speaker sentences   0:  test_spk   utt# 4 of 9
+id: (test_spk-004)
+Labels: <o,f0,m>
+File: test_file
+Channel: 1
+Scores: (#C #S #D #I) 54 4 1 1
+Ref times: t1= 42.08 t2= 58.60
+REF:  nederland betaalt nog     steeds  voor    de      beveiliging van     ayaan   hirsi   ali     dat     ZEI     het     oud     kamerlid in      het     interview met     newsweek **      HIRSI   ali     woont   en      werkt   tegenwoordig in      de      verenigde staten  het     tijdschrift sprak   met     hirsi   ali     over    de      verschijning van     haar    boek    THE     INFIDEL in      de      vs      HET     staat   hoog    op      de      boekenlijst van     de      new     york    times   
+HYP:  nederland betaalt nog     steeds  voor    de      beveiliging van     ayaan   hirsi   ali     dat     ZIJ     het     oud     kamerlid in      het     interview met     newsweek IS      JE      ali     woont   en      werkt   tegenwoordig in      de      verenigde staten  het     tijdschrift sprak   met     hirsi   ali     over    de      verschijning van     haar    boek    DE      INVAL   in      de      vs      ***     staat   hoog    op      de      boekenlijst van     de      new     york    times   
+H_T1: 42.12     42.48   42.75   42.87   43.20   43.38   43.44       43.98   44.13   44.46   44.79   45.30   45.48   45.60   45.72   46.05    46.38   46.47   46.68     47.19   47.49    48.57   48.78   48.90   49.17   49.44   49.56   49.80        50.31   50.43   50.49     50.79   51.57   51.72       52.11   52.41   52.56   52.86   53.16   53.34   53.40        53.94   54.09   54.21   54.51   54.63   55.41   55.59   55.68           56.41   56.64   56.88   56.97   57.06       57.60   57.72   57.78   57.96   58.14   
+H_T2: 42.48     42.75   42.87   43.20   43.38   43.44   43.98       44.13   44.46   44.79   45.18   45.48   45.60   45.72   46.05   46.38    46.47   46.65   47.19     47.43   48.12    48.78   48.90   49.17   49.44   49.56   49.80   50.31        50.43   50.49   50.79     51.18   51.72   52.11       52.41   52.56   52.86   53.16   53.34   53.40   53.94        54.09   54.21   54.48   54.63   55.25   55.59   55.68   56.04           56.64   56.88   56.97   57.06   57.60       57.72   57.78   57.96   58.14   58.53   
+CONF: 1.0000    1.0000  1.0000  1.0000  1.0000  1.0000  1.0000      1.0000  1.0000  1.0000  1.0000  0.5600  0.4800  0.4900  0.9600  0.9600   0.9800  0.9700  1.0000    1.0000  1.0000   0.9500  0.8600  0.7900  1.0000  1.0000  1.0000  1.0000       1.0000  1.0000  1.0000    1.0000  1.0000  0.9900      1.0000  1.0000  0.9900  1.0000  1.0000  1.0000  1.0000       1.0000  1.0000  1.0000  0.9800  0.8400  1.0000  1.0000  1.0000          1.0000  1.0000  1.0000  1.0000  1.0000      0.9900  0.4900  1.0000  1.0000  1.0000  
+Eval:                                                                                                       S                                                                           I       S                                                                                                                                                                                               S       S                               D                                                                                           
+
+Speaker sentences   0:  test_spk   utt# 5 of 9
+id: (test_spk-005)
+Labels: <o,f0,m>
+File: test_file
+Channel: 1
+Scores: (#C #S #D #I) 25 2 0 2
+Ref times: t1= 59.96 t2= 70.69
+REF:  iran    is      gisteren niet    gestopt met     het     verrijken van     uranium zoals   het     ************** ********* INTERNATIONALE- de      internationale gemeenschap wel     had     GEëIST dat     heeft   de      atoomwaakhond iaea    in      wenen   bekendgemaakt 
+HYP:  iran    is      gisteren niet    gestopt met     het     verrijken van     uranium zoals   het     INTERNATIONALE GEMEENTEN OVER            de      internationale gemeenschap wel     had     GEEIST  dat     heeft   de      atoomwaakhond iaea    in      wenen   bekendgemaakt 
+H_T1: 59.99   60.38   60.53    60.86   61.01   61.37   61.52   61.61     62.03   62.18   63.08   63.32   63.50          64.25     64.60           64.76   65.00          65.60       66.02   66.17   66.32   67.19   67.34   67.49   67.55         68.30   69.20   69.35   69.65         
+H_T2: 60.38   60.53   60.86    61.01   61.37   61.52   61.61   62.03     62.18   62.78   63.32   63.47   64.25          64.60     64.73           65.00   65.60          66.02       66.17   66.32   66.77   67.34   67.49   67.55   68.27         69.20   69.35   69.65   70.37         
+CONF: 1.0000  1.0000  1.0000   1.0000  1.0000  1.0000  1.0000  1.0000    1.0000  1.0000  1.0000  0.8700  1.0000         0.4300    0.7200          1.0000  1.0000         1.0000      0.9900  1.0000  0.7500  1.0000  1.0000  1.0000  1.0000        1.0000  1.0000  1.0000  1.0000        
+Eval:                                                                                                    I              I         S                                                                  S                                                                                   
+
+Speaker sentences   0:  test_spk   utt# 6 of 9
+id: (test_spk-006)
+Labels: <o,f0,m>
+File: test_file
+Channel: 1
+Scores: (#C #S #D #I) 33 0 0 0
+Ref times: t1= 70.69 t2= 82.78
+REF:  iran    heeft   meer    dan     driehonderd centrifuges neergezet in      een     fabriek waar    de      verrijking van     uranium op      industriële schaal  is      gepland aldus   het     atoomagentschap het     westen  maakt   zich    zorgen  dat     iran    atoombommen wil     bouwen  
+HYP:  iran    heeft   meer    dan     driehonderd centrifuges neergezet in      een     fabriek waar    de      verrijking van     uranium op      industriële schaal  is      gepland aldus   het     atoomagentschap het     westen  maakt   zich    zorgen  dat     iran    atoombommen wil     bouwen  
+H_T1: 70.94   71.27   71.45   71.72   71.87       72.41       73.10     73.73   73.91   74.00   74.63   74.75   74.81      75.26   75.41   75.95   76.16        76.85   77.15   77.24   77.96   78.29   78.38           79.49   79.64   79.94   80.15   80.30   80.66   80.84   81.26       82.04   82.22   
+H_T2: 71.27   71.45   71.72   71.87   72.41       73.10       73.70     73.91   74.00   74.42   74.75   74.81   75.26      75.41   75.95   76.13   76.85        77.15   77.24   77.69   78.29   78.38   79.25           79.64   79.94   80.15   80.30   80.66   80.84   81.23   82.04       82.22   82.61   
+CONF: 1.0000  1.0000  1.0000  1.0000  0.8300      1.0000      1.0000    1.0000  1.0000  1.0000  0.8500  1.0000  1.0000     1.0000  1.0000  1.0000  0.9600       1.0000  1.0000  0.9800  1.0000  0.9700  0.9200          0.9400  1.0000  1.0000  1.0000  1.0000  1.0000  1.0000  1.0000      1.0000  1.0000  
+Eval:                                                                                                                                                                                                                                                                                                       
+
+Speaker sentences   0:  test_spk   utt# 7 of 9
+id: (test_spk-007)
+Labels: <o,f0,m>
+File: test_file
+Channel: 1
+Scores: (#C #S #D #I) 22 0 0 0
+Ref times: t1= 84.08 t2= 92.16
+REF:  in      verschillende wijken  van     bagdad  zijn    het     afgelopen etmaal  twintig lijken  gevonden van     doodgeschoten irakezen de      stoffelijke overschotten vertoonden sporen  van     marteling 
+HYP:  in      verschillende wijken  van     bagdad  zijn    het     afgelopen etmaal  twintig lijken  gevonden van     doodgeschoten irakezen de      stoffelijke overschotten vertoonden sporen  van     marteling 
+H_T1: 84.13   84.34         84.73   85.00   85.15   85.66   85.87   85.96     86.38   86.74   87.10   87.49    87.88   88.06         88.69    89.74   89.89       90.28        90.73      91.09   91.42   91.57     
+H_T2: 84.34   84.73         85.00   85.15   85.66   85.87   85.96   86.38     86.74   87.10   87.49   87.88    88.06   88.69         89.32    89.89   90.28       90.73        91.09      91.42   91.57   92.14     
+CONF: 1.0000  1.0000        1.0000  1.0000  1.0000  1.0000  1.0000  1.0000    1.0000  1.0000  1.0000  1.0000   1.0000  1.0000        1.0000   0.9800  1.0000      1.0000       0.5700     1.0000  1.0000  1.0000    
+Eval:                                                                                                                                                                                                               
+
+Speaker sentences   0:  test_spk   utt# 8 of 9
+id: (test_spk-008)
+Labels: <o,f0,m>
+File: test_file
+Channel: 1
+Scores: (#C #S #D #I) 23 2 0 2
+Ref times: t1= 93.18 t2= 101.40
+REF:  **      nederland doet    het     op      het     gebied  van     innovatie beter   DAT     het     gemiddelde van     de      europese unie    dat     blijkt  uit     het     jaarlijkse ********** INNOVATIESCOREBORD van     de      eu      
+HYP:  EN      nederland doet    het     op      het     gebied  van     innovatie beter   DAN     het     gemiddelde van     de      europese unie    dat     blijkt  uit     het     jaarlijkse INNOVATIES SCOREBORD          van     de      eu      
+H_T1: 93.20   93.35     93.77   93.95   94.04   94.16   94.25   94.52   94.70     95.36   95.93   96.23   96.32      96.77   96.92   96.98    97.43   98.06   98.18   98.48   98.60   98.69      99.14      99.84              100.46  100.61  100.73  
+H_T2: 93.35   93.74     93.95   94.04   94.16   94.25   94.52   94.70   95.36     95.90   96.23   96.32   96.77      96.92   96.98   97.43    97.73   98.18   98.48   98.60   98.69   99.14      99.84      100.46             100.61  100.73  101.09  
+CONF: 0.9600  1.0000    1.0000  0.9800  1.0000  0.9800  1.0000  1.0000  1.0000    1.0000  1.0000  1.0000  1.0000     1.0000  0.9900  1.0000   1.0000  0.9900  1.0000  1.0000  1.0000  1.0000     0.5600     1.0000             1.0000  1.0000  1.0000  
+Eval: I                                                                                   S                                                                                                      I          S                                          
+
+

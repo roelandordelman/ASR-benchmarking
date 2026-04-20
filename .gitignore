@@ -1,0 +1,22 @@
+.env
+__pycache__/
+*.py[cod]
+.DS_Store
+
+# Audio files — keep locally, never commit
+corpora/*/audio/
+*.wav
+*.mp3
+*.flac
+*.ogg
+*.m4a
+
+# Large model caches
+.cache/
+huggingface/
+
+# Results are committed (scores only, no audio)
+# Uncomment if you prefer not to commit intermediate files:
+# results/*/*/results/
+# results/*/*/*_normalized.*
+# results/*/*/*_variation.*

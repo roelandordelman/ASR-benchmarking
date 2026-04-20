@@ -1,0 +1,8 @@
+id: example
+name: "Example Corpus (ASR_NL_benchmark)"
+description: "Small broadcast-news excerpt bundled with the ASR_NL_benchmark evaluation tool. Use for smoke-testing the pipeline."
+language: nl
+domain: broadcast_news
+size_hours: 0.03
+license: "example only — do not use for published benchmarks"
+audio_path: "${ASR_CORPUS_ROOT}/example/audio"

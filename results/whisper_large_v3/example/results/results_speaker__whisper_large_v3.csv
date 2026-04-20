@@ -1,0 +1,2 @@
+speaker,ref_words,WER,kind
+.test_spk,279,7.5,whisper_large_v3

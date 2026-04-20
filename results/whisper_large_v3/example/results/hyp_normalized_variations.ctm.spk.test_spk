@@ -1,0 +1,119 @@
+SCORING FOR SPEAKER: test_spk
+     of /input/hyp_normalized_variations.ctm
+
+SENTENCE RECOGNITION PERFORMANCE
+
+ sentences                                           9
+ with errors                             55.6%   (   5)
+
+   with substitutions                    55.6%   (   5)
+   with deletions                        22.2%   (   2)
+   with insertions                       55.6%   (   5)
+
+
+WORD RECOGNITION PERFORMANCE
+
+Percent Total Error       =    7.5%   (  21)
+
+Percent Correct           =   95.0%   ( 265)
+
+Percent Substitution      =    4.3%   (  12)
+Percent Deletions         =    0.7%   (   2)
+Percent Insertions        =    2.5%   (   7)
+Percent Word Accuracy     =   92.5%
+
+
+Ref. words                =           ( 279)
+Hyp. words                =           ( 284)
+Aligned words             =           ( 286)
+
+CONFUSION PAIRS                  Total                 (12)
+                                 With >=  1 occurrences (12)
+
+   1:    1  ->  dat ==> dan
+   2:    1  ->  geëist ==> geeist
+   3:    1  ->  hij ==> en
+   4:    1  ->  hirsi ==> je
+   5:    1  ->  hoorde ==> worden
+   6:    1  ->  infidel ==> inval
+   7:    1  ->  innovatiescorebord ==> scorebord
+   8:    1  ->  internationale- ==> over
+   9:    1  ->  opruiende ==> ruilen
+  10:    1  ->  the ==> de
+  11:    1  ->  verkeersgebied ==> gebied
+  12:    1  ->  zei ==> zij
+     -------
+        12
+
+
+
+INSERTIONS                       Total                 (7)
+                                 With >=  1 occurrences (7)
+
+   1:    1  ->  en
+   2:    1  ->  gemeenten
+   3:    1  ->  innovaties
+   4:    1  ->  internationale
+   5:    1  ->  is
+   6:    1  ->  op
+   7:    1  ->  verkeerde
+     -------
+         7
+
+
+
+DELETIONS                        Total                 (2)
+                                 With >=  1 occurrences (2)
+
+   1:    1  ->  het
+   2:    1  ->  u
+     -------
+         2
+
+
+
+SUBSTITUTIONS                    Total                 (12)
+                                 With >=  1 occurrences (12)
+
+   1:    1  ->  dat
+   2:    1  ->  geëist
+   3:    1  ->  hij
+   4:    1  ->  hirsi
+   5:    1  ->  hoorde
+   6:    1  ->  infidel
+   7:    1  ->  innovatiescorebord
+   8:    1  ->  internationale-
+   9:    1  ->  opruiende
+  10:    1  ->  the
+  11:    1  ->  verkeersgebied
+  12:    1  ->  zei
+     -------
+        12
+
+
+* NOTE: The 'Substitution' words are those reference words
+        for which the recognizer supplied an incorrect word.
+
+
+FALSELY RECOGNIZED               Total                 (12)
+                                 With >=  1 occurrences (12)
+
+   1:    1  ->  dan
+   2:    1  ->  de
+   3:    1  ->  en
+   4:    1  ->  gebied
+   5:    1  ->  geeist
+   6:    1  ->  inval
+   7:    1  ->  je
+   8:    1  ->  over
+   9:    1  ->  ruilen
+  10:    1  ->  scorebord
+  11:    1  ->  worden
+  12:    1  ->  zij
+     -------
+        12
+
+
+* NOTE: The 'Falsely Recognized' words are those hypothesis words
+        which the recognizer incorrectly substituted for a reference word.
+

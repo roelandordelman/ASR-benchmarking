@@ -1,0 +1,13 @@
+{
+  "overall_wer": 7.5,
+  "categories": [
+    {
+      "category": "hyp",
+      "ref_words": 279,
+      "WER": 7.5
+    }
+  ],
+  "system": "whisper_large_v3",
+  "corpus": "example",
+  "timestamp": "2026-04-20T11:13:48.384664+00:00"
+}
