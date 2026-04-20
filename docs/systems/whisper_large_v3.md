@@ -19,4 +19,15 @@ OpenAI Whisper large-v3 via faster-whisper. Word-level timestamps enable direct 
 | [example](../corpora/example.md) | 7.5% |
 | [nbest2008_mini](../corpora/nbest2008_mini.md) | 51.3% |
 
+## Hardware
 
+| | |
+|---|---|
+| **Machine** | MacBook Pro (Mac16,8) |
+| **Chip** | Apple M4 Pro |
+| **Cores** | 14-core (10P+4E) |
+| **RAM (GB)** | 48 |
+| **Accelerator** | cpu |
+| **OS** | Darwin 25.4.0 |
+| **CTranslate2** | 4.7.1 |
+| **Python** | 3.9.6 |

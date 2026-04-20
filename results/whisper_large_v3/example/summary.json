@@ -9,5 +9,16 @@
   ],
   "system": "whisper_large_v3",
   "corpus": "example",
-  "timestamp": "2026-04-20T11:13:48.384664+00:00"
+  "timestamp": "2026-04-20T11:13:48.384664+00:00",
+  "hardware": {
+    "os": "Darwin 25.4.0",
+    "arch": "arm64",
+    "python": "3.9.6",
+    "model": "MacBook Pro (Mac16,8)",
+    "chip": "Apple M4 Pro",
+    "cores": "14-core (10P+4E)",
+    "ram_gb": "48",
+    "device": "cpu",
+    "ctranslate2": "4.7.1"
+  }
 }
