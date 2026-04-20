@@ -1,65 +1,103 @@
 # ASR NL Benchmark
 
-Automated benchmark for Dutch ASR systems. Runs evaluation across a matrix of systems × corpora and publishes results as a static website.
+Automated benchmark for Dutch ASR systems. Runs evaluation across a matrix of systems × corpora and publishes results as a static website at [roelandordelman.github.io/ASR-benchmarking](https://roelandordelman.github.io/ASR-benchmarking/).
 
-## Quick start
+## Requirements
+
+- Python 3.9+
+- Docker Desktop (running) — used for the NIST sclite evaluation step
+- SSH key access to Hetzner Storage Box — for corpus audio (request access via `corpus.yaml`)
 
 ```bash
-pip install -r requirements.txt
-
-# Test the full pipeline with precomputed example data (no audio or GPU needed)
-python orchestrate.py --use-precomputed
-
-# Open docs/index.md to see the generated matrix
+pip3 install -r requirements.txt
 ```
+
+## Quick start — smoke test (no audio needed)
+
+```bash
+python3 orchestrate.py --use-precomputed
+```
+
+Uses the precomputed example CTM bundled with the repo. Runs the full eval + doc generation pipeline in under a minute.
+
+## Running a real benchmark
+
+```bash
+cp .env.example .env
+# edit: set ASR_CORPUS_ROOT and optionally HF_TOKEN
+
+export $(cat .env | xargs)
+python3 orchestrate.py --corpus nbest2008_mini
+```
+
+The orchestrator will:
+1. Fetch missing audio from the Hetzner Storage Box via SFTP (if you have access)
+2. Run the ASR system on the audio
+3. Score with the [ASR_NL_benchmark](https://github.com/opensource-spraakherkenning-nl/ASR_NL_benchmark) Docker image (sclite)
+4. Save `results/{system}/{corpus}/summary.json`
+5. Regenerate `docs/` markdown
+
+## Audio storage
+
+Audio files are never committed to git. They live locally at:
+
+```
+$ASR_CORPUS_ROOT/{corpus_id}/audio/
+```
+
+Each corpus with a restricted or large audio set is backed by the Hetzner Storage Box. The fetch script handles download:
+
+```bash
+python3 scripts/fetch_corpus.py nbest2008_mini          # download missing files
+python3 scripts/fetch_corpus.py nbest2008_mini --list   # inspect remote without downloading
+```
+
+**Requesting access:** contact the maintainer listed in the relevant `corpus.yaml`.  
+**SSH key:** set `ASR_SFTP_KEY=/path/to/key` (default: `~/.ssh/id_hetzner_rclone`).
 
 ## Adding a corpus
 
 1. Create `corpora/{id}/` with:
-   - `corpus.yaml` — metadata
-   - `reference.stm` — reference transcripts
+   - `corpus.yaml` — metadata, SFTP location, license, contact
+   - `reference.stm` — reference transcripts in STM format
    - `precomputed/hyp.ctm` — optional, for smoke-testing without audio
-2. Place audio files in `$ASR_CORPUS_ROOT/{id}/audio/` (local only, not committed)
-3. Run `python orchestrate.py`
+2. Upload audio to storage and add the `sftp:` block to `corpus.yaml`
+3. Place audio locally at `$ASR_CORPUS_ROOT/{id}/audio/`
+4. Run `python3 orchestrate.py --corpus {id}`
 
 ## Adding a system
 
 1. Create `systems/{id}/` with:
-   - `system.yaml` — metadata
-   - `run.py` — transcribes `--audio-dir` → `--output-ctm`
+   - `system.yaml` — metadata, HuggingFace model id, type
+   - `run.py` — standard interface: `--audio-dir DIR --output-ctm FILE`
    - `requirements.txt`
-2. Run `python orchestrate.py`
+2. Run `python3 orchestrate.py --system {id}`
 
-## Audio storage
+See `systems/whisper_large_v3/` as a reference implementation.
 
-Audio is kept locally and never committed. Set the root path in `.env`:
+## Corpus overview
 
-```bash
-cp .env.example .env
-# edit ASR_CORPUS_ROOT=/your/local/path
-```
-
-For team collaboration, [DVC](https://dvc.org) can sync audio to a shared remote (SSH, S3, NAS) while keeping the rest of the repo in git.
+| Corpus | Domain | Size | Access |
+|--------|--------|------|--------|
+| `example` | Broadcast news | ~2 min | Public (bundled) |
+| `nbest2008_mini` | Broadcast news | ~46 min | Request |
+| `nbest2008` | Broadcast news | ~541 min | Request |
 
 ## Nightly HuggingFace watcher
 
-```bash
-# Check for new Dutch ASR models on HuggingFace
-python scripts/hf_watcher.py
+Automatically detects new Dutch ASR models on HuggingFace and registers them as benchmark systems:
 
-# Register them as systems and run benchmarks
-python scripts/hf_watcher.py --register --run
+```bash
+python3 scripts/hf_watcher.py                  # dry run — show new models
+python3 scripts/hf_watcher.py --register       # write system dirs for new models
+python3 scripts/hf_watcher.py --register --run # register + benchmark
 ```
 
 Add to crontab for nightly automation:
 ```
-0 2 * * * cd /path/to/ASR-benchmarking && python scripts/hf_watcher.py --register --run >> logs/hf_watcher.log 2>&1
+0 2 * * * cd /path/to/ASR-benchmarking && python3 scripts/hf_watcher.py --register --run >> logs/hf_watcher.log 2>&1
 ```
-
-## Evaluation
-
-Uses the [ASR_NL_benchmark](https://github.com/opensource-spraakherkenning-nl/ASR_NL_benchmark) Docker image (NIST SCTK / sclite). Requires Docker to be running.
 
 ## Website
 
-Results are published via GitHub Pages. Enable Pages on the `docs/` folder in your repo settings. The site rebuilds automatically when you push updated markdown.
+Results are published via GitHub Pages from the `docs/` folder. The site rebuilds automatically when you push. Run `python3 generate_docs.py` locally to preview changes before pushing.
