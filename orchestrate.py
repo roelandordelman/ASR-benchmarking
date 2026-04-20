@@ -97,18 +97,19 @@ def run_asr(system: Path, audio_dir: Path, work_dir: Path, corpus_meta: dict) ->
 def run_eval(system: Path, work_dir: Path) -> Path:
     abs_work = work_dir.resolve()
     print(f"  → Eval Docker ({EVAL_DOCKER_IMAGE})")
-    subprocess.run(
-        [
-            "docker", "run", "--rm",
-            "--mount", f"type=bind,source={abs_work},target=/input",
-            EVAL_DOCKER_IMAGE,
-            "python", "ASR_NL_benchmark",
-            "-hyp", "hyp.ctm", "ctm",
-            "-ref", "reference.stm", "stm",
-            "-kind", system.name,
-        ],
-        check=True,
-    )
+    cmd = [
+        "docker", "run", "--rm",
+        "--mount", f"type=bind,source={abs_work},target=/input",
+        EVAL_DOCKER_IMAGE,
+        "python", "ASR_NL_benchmark",
+        "-hyp", "hyp.ctm", "ctm",
+        "-ref", "reference.stm", "stm",
+        "-kind", system.name,
+    ]
+    if (work_dir / "reference.uem").exists():
+        cmd += ["-uem", "reference.uem"]
+        print(f"  → Using UEM for precise segment scoring")
+    subprocess.run(cmd, check=True)
     return work_dir / "results"
 
 
@@ -167,6 +168,9 @@ def main():
             work_dir.mkdir(parents=True, exist_ok=True)
 
             shutil.copy(corpus / "reference.stm", work_dir / "reference.stm")
+            uem_src = corpus / "reference.uem"
+            if uem_src.exists():
+                shutil.copy(uem_src, work_dir / "reference.uem")
 
             corpus_meta = load_yaml(corpus / "corpus.yaml")
             t_asr_start = time.time()
