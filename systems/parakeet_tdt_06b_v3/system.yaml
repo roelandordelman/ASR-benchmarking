@@ -1,0 +1,7 @@
+id: parakeet_tdt_06b_v3
+name: "Parakeet TDT 0.6B v3"
+description: "NVIDIA Parakeet-TDT-0.6B-v3 via NeMo. Supports 25 European languages including Dutch. Word-level timestamps via TDT decoder."
+hf_model_id: "nvidia/parakeet-tdt-0.6b-v3"
+hf_model_revision: "main"
+language: nl
+type: nemo

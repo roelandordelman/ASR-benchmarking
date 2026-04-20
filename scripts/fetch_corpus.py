@@ -52,7 +52,7 @@ def fetch(corpus_id: str, force: bool = False, list_only: bool = False):
         sys.exit(f"No sftp config in {corpus_id}/corpus.yaml")
 
     host = sftp_conf["host"]
-    port = sftp_conf.get("port", 23)
+    port = sftp_conf.get("port", 22)
     user = sftp_conf["user"]
     remote_path = sftp_conf["path"]
 

@@ -15,8 +15,11 @@ corpora/*/audio/
 .cache/
 huggingface/
 
-# Results are committed (scores only, no audio)
-# Uncomment if you prefer not to commit intermediate files:
-# results/*/*/results/
-# results/*/*/*_normalized.*
-# results/*/*/*_variation.*
+# Results: only keep summary.json — exclude sclite intermediate files
+results/*/*/results/
+results/*/*/hyp.ctm
+results/*/*/hyp_normalized*.ctm
+results/*/*/hyp_normalized*.ctm.*
+results/*/*/hyp_expectation_file.json
+results/*/*/ref_expectation_file.json
+results/*/*/*.log

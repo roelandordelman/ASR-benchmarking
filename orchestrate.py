@@ -168,6 +168,7 @@ def main():
 
             shutil.copy(corpus / "reference.stm", work_dir / "reference.stm")
 
+            corpus_meta = load_yaml(corpus / "corpus.yaml")
             t_asr_start = time.time()
             if args.use_precomputed:
                 precomputed = corpus / "precomputed" / "hyp.ctm"
@@ -193,7 +194,6 @@ def main():
             summary["corpus"] = corpus.name
             summary["timestamp"] = datetime.now(timezone.utc).isoformat()
 
-            corpus_meta = load_yaml(corpus / "corpus.yaml")
             audio_hours = corpus_meta.get("size_hours")
             if asr_duration_s and audio_hours:
                 rtf = round(asr_duration_s / (audio_hours * 3600), 3)
