@@ -109,16 +109,44 @@ title: "{meta.get('name', corpus_id)}"
         print(f"  wrote docs/corpora/{corpus_id}.md")
 
 
+def _fmt_hardware(hw: dict) -> str:
+    if not hw:
+        return ""
+    lines = ["## Hardware"]
+    lines.append("\n| | |")
+    lines.append("|---|---|")
+    for key, label in [
+        ("model",       "Machine"),
+        ("chip",        "Chip"),
+        ("cores",       "Cores"),
+        ("ram_gb",      "RAM (GB)"),
+        ("device",      "Accelerator"),
+        ("gpu",         "GPU"),
+        ("vram_gb",     "VRAM (GB)"),
+        ("os",          "OS"),
+        ("ctranslate2", "CTranslate2"),
+        ("python",      "Python"),
+    ]:
+        val = hw.get(key)
+        if val:
+            lines.append(f"| **{label}** | {val} |")
+    return "\n".join(lines)
+
+
 def write_system_pages(summaries, systems):
     (DOCS_DIR / "systems").mkdir(exist_ok=True)
     for sys_id in systems:
         meta = load_yaml(SYSTEMS_DIR / sys_id / "system.yaml")
+        sys_summaries = [s for s in summaries if s["system"] == sys_id]
         rows = [
-            f"| [{s['corpus']}](../corpora/{s['corpus']}.md) | {fmt_wer(s['overall_wer'])} |"
-            for s in summaries if s["system"] == sys_id
+            f"| [{s['corpus']}](../corpora/{s['corpus']}.md) | {fmt_wer(s['overall_wer'])} | {s.get('rtf', '—')} |"
+            for s in sys_summaries
         ]
+        # Use hardware from the most recent run
+        hw = next((s.get("hardware", {}) for s in reversed(sys_summaries)), {})
         hf = meta.get("hf_model_id", "")
         hf_link = f"[{hf}](https://huggingface.co/{hf})" if hf else "—"
+        hw_section = _fmt_hardware(hw)
         content = f"""---
 title: "{meta.get('name', sys_id)}"
 ---
@@ -135,9 +163,9 @@ title: "{meta.get('name', sys_id)}"
 
 ## Results
 
-| Corpus | WER |
-|--------|-----|
-""" + "\n".join(rows) + "\n"
+| Corpus | WER | RTF |
+|--------|-----|-----|
+""" + "\n".join(rows) + f"\n\n{hw_section}\n"
         (DOCS_DIR / "systems" / f"{sys_id}.md").write_text(content)
         print(f"  wrote docs/systems/{sys_id}.md")
 

@@ -18,6 +18,7 @@ import os
 import shutil
 import subprocess
 import sys
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -166,12 +167,14 @@ def main():
 
             shutil.copy(corpus / "reference.stm", work_dir / "reference.stm")
 
+            t_asr_start = time.time()
             if args.use_precomputed:
                 precomputed = corpus / "precomputed" / "hyp.ctm"
                 if not precomputed.exists():
                     print(f"  [skip] no precomputed CTM at {precomputed}")
                     continue
                 shutil.copy(precomputed, work_dir / "hyp.ctm")
+                asr_duration_s = None
             else:
                 audio_dir = resolve_audio_dir(corpus)
                 if audio_dir is None:
@@ -180,6 +183,7 @@ def main():
                     print(f"  [skip] audio not found — set ASR_CORPUS_ROOT or add corpora/{corpus.name}/audio/")
                     continue
                 run_asr(system, audio_dir, work_dir)
+                asr_duration_s = time.time() - t_asr_start
 
             results_subdir = run_eval(system, work_dir)
 
@@ -187,8 +191,21 @@ def main():
             summary["system"] = system.name
             summary["corpus"] = corpus.name
             summary["timestamp"] = datetime.now(timezone.utc).isoformat()
+
+            corpus_meta = load_yaml(corpus / "corpus.yaml")
+            audio_hours = corpus_meta.get("size_hours")
+            if asr_duration_s and audio_hours:
+                rtf = round(asr_duration_s / (audio_hours * 3600), 3)
+                summary["rtf"] = rtf
+                print(f"  [done] WER = {summary['overall_wer']:.1f}%  RTF = {rtf:.3f}")
+            else:
+                print(f"  [done] WER = {summary['overall_wer']:.1f}%")
+
+            sys.path.insert(0, str(Path(__file__).parent / "scripts"))
+            from detect_hardware import detect as detect_hardware
+            summary["hardware"] = detect_hardware()
+
             (work_dir / "summary.json").write_text(json.dumps(summary, indent=2))
-            print(f"  [done] WER = {summary['overall_wer']:.1f}%")
             ran += 1
 
     print(f"\nDone: {ran} run, {skipped} skipped.")
