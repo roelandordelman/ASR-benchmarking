@@ -1,21 +1,21 @@
 {
-  "overall_wer": 48.1272,
+  "overall_wer": 16.8375,
   "categories": [
     {
       "category": NaN,
       "ref_words": 5060,
-      "WER": 48.59
+      "WER": 16.88
     },
     {
       "category": "verslaggeve",
       "ref_words": 84,
-      "WER": 20.25
+      "WER": 14.28
     }
   ],
   "system": "whisper_large_v3_turbo",
   "corpus": "nbest2008_mini",
-  "timestamp": "2026-04-20T17:39:38.092722+00:00",
-  "rtf": 0.213,
+  "timestamp": "2026-04-20T18:13:39.157086+00:00",
+  "rtf": 0.142,
   "hardware": {
     "os": "Darwin 25.4.0",
     "arch": "arm64",
