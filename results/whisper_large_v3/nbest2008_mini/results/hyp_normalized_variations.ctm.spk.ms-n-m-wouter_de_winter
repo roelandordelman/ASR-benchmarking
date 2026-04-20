@@ -1,0 +1,214 @@
+SCORING FOR SPEAKER: ms-n-m-wouter_de_winter
+     of /input/hyp_normalized_variations.ctm
+
+SENTENCE RECOGNITION PERFORMANCE
+
+ sentences                                          13
+ with errors                             69.2%   (   9)
+
+   with substitutions                    53.8%   (   7)
+   with deletions                        69.2%   (   9)
+   with insertions                       53.8%   (   7)
+
+
+WORD RECOGNITION PERFORMANCE
+
+Percent Total Error       =   45.4%   ( 134)
+
+Percent Correct           =   83.7%   ( 247)
+
+Percent Substitution      =    8.1%   (  24)
+Percent Deletions         =    8.1%   (  24)
+Percent Insertions        =   29.2%   (  86)
+Percent Word Accuracy     =   54.6%
+
+
+Ref. words                =           ( 295)
+Hyp. words                =           ( 357)
+Aligned words             =           ( 381)
+
+CONFUSION PAIRS                  Total                 (24)
+                                 With >=  1 occurrences (24)
+
+   1:    1  ->  als ==> die
+   2:    1  ->  belastingschijf ==> belastingsgrijp
+   3:    1  ->  bewindsman ==> -bewindsman
+   4:    1  ->  beziggehouden ==> gehouden
+   5:    1  ->  conisch ==> draconisch
+   6:    1  ->  dit ==> het
+   7:    1  ->  er ==> eigenlijk
+   8:    1  ->  er ==> wilde
+   9:    1  ->  huize ==> -huizen
+  10:    1  ->  ik ==> manier
+  11:    1  ->  lasten ==> last
+  12:    1  ->  numico ==> nuico
+  13:    1  ->  procenthesitation ==> en
+  14:    1  ->  procenthesitation ==> het
+  15:    1  ->  procenthesitation ==> mij
+  16:    1  ->  procenthesitation ==> nee
+  17:    1  ->  procenthesitation ==> van
+  18:    1  ->  schaven ==> afschaven
+  19:    1  ->  terechtkomen ==> komen
+  20:    1  ->  vvd'er ==> 'er
+  21:    1  ->  wa- ==> ook
+  22:    1  ->  zalm ==> salm
+  23:    1  ->  zo ==> antwoord
+  24:    1  ->  zo'n ==> een
+     -------
+        24
+
+
+
+INSERTIONS                       Total                 (64)
+                                 With >=  1 occurrences (64)
+
+   1:    4  ->  de
+   2:    4  ->  het
+   3:    4  ->  u
+   4:    3  ->  aan
+   5:    2  ->  administratieve
+   6:    2  ->  dus
+   7:    2  ->  en
+   8:    2  ->  heeft
+   9:    2  ->  ja
+  10:    2  ->  meestal
+  11:    2  ->  niet
+  12:    2  ->  of
+  13:    2  ->  op
+  14:    2  ->  pvda
+  15:    2  ->  vvd
+  16:    1  ->  'er
+  17:    1  ->  -voorganger
+  18:    1  ->  -voorgangers
+  19:    1  ->  andere
+  20:    1  ->  bezig
+  21:    1  ->  daar
+  22:    1  ->  daarom
+  23:    1  ->  dank
+  24:    1  ->  dat
+  25:    1  ->  doen
+  26:    1  ->  door
+  27:    1  ->  fantastisch
+  28:    1  ->  gaan
+  29:    1  ->  gaf
+  30:    1  ->  gedaan
+  31:    1  ->  gerrit
+  32:    1  ->  hem
+  33:    1  ->  hè
+  34:    1  ->  kabinet
+  35:    1  ->  lasten
+  36:    1  ->  loon
+  37:    1  ->  maar
+  38:    1  ->  mag
+  39:    1  ->  nee
+  40:    1  ->  nou
+  41:    1  ->  om
+  42:    1  ->  onder
+  43:    1  ->  ook
+  44:    1  ->  opnieuw
+  45:    1  ->  procent
+  46:    1  ->  salm
+  47:    1  ->  smoeven
+  48:    1  ->  te
+  49:    1  ->  terecht
+  50:    1  ->  trekt
+  51:    1  ->  uit
+  52:    1  ->  uw
+  53:    1  ->  van
+  54:    1  ->  verminderd
+  55:    1  ->  vijfentwintig
+  56:    1  ->  voeren
+  57:    1  ->  vorige
+  58:    1  ->  vroeg
+  59:    1  ->  we
+  60:    1  ->  wel
+  61:    1  ->  zegt
+  62:    1  ->  zich
+  63:    1  ->  zo
+  64:    1  ->  zozeer
+     -------
+        86
+
+
+
+DELETIONS                        Total                 (10)
+                                 With >=  1 occurrences (10)
+
+   1:   12  ->  procenthesitation
+   2:    3  ->  ja
+   3:    2  ->  een
+   4:    1  ->  ik
+   5:    1  ->  maar
+   6:    1  ->  op
+   7:    1  ->  te
+   8:    1  ->  vanaf
+   9:    1  ->  wil
+  10:    1  ->  zijn
+     -------
+        24
+
+
+
+SUBSTITUTIONS                    Total                 (19)
+                                 With >=  1 occurrences (19)
+
+   1:    5  ->  procenthesitation
+   2:    2  ->  er
+   3:    1  ->  als
+   4:    1  ->  belastingschijf
+   5:    1  ->  bewindsman
+   6:    1  ->  beziggehouden
+   7:    1  ->  conisch
+   8:    1  ->  dit
+   9:    1  ->  huize
+  10:    1  ->  ik
+  11:    1  ->  lasten
+  12:    1  ->  numico
+  13:    1  ->  schaven
+  14:    1  ->  terechtkomen
+  15:    1  ->  vvd'er
+  16:    1  ->  wa-
+  17:    1  ->  zalm
+  18:    1  ->  zo
+  19:    1  ->  zo'n
+     -------
+        24
+
+
+* NOTE: The 'Substitution' words are those reference words
+        for which the recognizer supplied an incorrect word.
+
+
+FALSELY RECOGNIZED               Total                 (23)
+                                 With >=  1 occurrences (23)
+
+   1:    2  ->  het
+   2:    1  ->  'er
+   3:    1  ->  -bewindsman
+   4:    1  ->  -huizen
+   5:    1  ->  afschaven
+   6:    1  ->  antwoord
+   7:    1  ->  belastingsgrijp
+   8:    1  ->  die
+   9:    1  ->  draconisch
+  10:    1  ->  een
+  11:    1  ->  eigenlijk
+  12:    1  ->  en
+  13:    1  ->  gehouden
+  14:    1  ->  komen
+  15:    1  ->  last
+  16:    1  ->  manier
+  17:    1  ->  mij
+  18:    1  ->  nee
+  19:    1  ->  nuico
+  20:    1  ->  ook
+  21:    1  ->  salm
+  22:    1  ->  van
+  23:    1  ->  wilde
+     -------
+        24
+
+
+* NOTE: The 'Falsely Recognized' words are those hypothesis words
+        which the recognizer incorrectly substituted for a reference word.
+

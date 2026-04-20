@@ -1,0 +1,89 @@
+SCORING FOR SPEAKER: fs-f-geinterviewde_4_nos_journaal-20uur_2007_02_18
+     of /input/hyp_normalized_variations.ctm
+
+SENTENCE RECOGNITION PERFORMANCE
+
+ sentences                                           1
+ with errors                            100.0%   (   1)
+
+   with substitutions                   100.0%   (   1)
+   with deletions                       100.0%   (   1)
+   with insertions                        0.0%   (   0)
+
+
+WORD RECOGNITION PERFORMANCE
+
+Percent Total Error       =   14.0%   (   7)
+
+Percent Correct           =   86.0%   (  43)
+
+Percent Substitution      =    8.0%   (   4)
+Percent Deletions         =    6.0%   (   3)
+Percent Insertions        =    0.0%   (   0)
+Percent Word Accuracy     =   86.0%
+
+
+Ref. words                =           (  50)
+Hyp. words                =           (  47)
+Aligned words             =           (  50)
+
+CONFUSION PAIRS                  Total                 (4)
+                                 With >=  1 occurrences (4)
+
+   1:    1  ->  al ==> wel
+   2:    1  ->  die ==> hij
+   3:    1  ->  is ==> dus
+   4:    1  ->  onderdukt ==> onderdrukt
+     -------
+         4
+
+
+
+INSERTIONS                       Total                 (0)
+                                 With >=  1 occurrences (0)
+
+     -------
+         0
+
+
+
+DELETIONS                        Total                 (3)
+                                 With >=  1 occurrences (3)
+
+   1:    1  ->  dat
+   2:    1  ->  er
+   3:    1  ->  ja
+     -------
+         3
+
+
+
+SUBSTITUTIONS                    Total                 (4)
+                                 With >=  1 occurrences (4)
+
+   1:    1  ->  al
+   2:    1  ->  die
+   3:    1  ->  is
+   4:    1  ->  onderdukt
+     -------
+         4
+
+
+* NOTE: The 'Substitution' words are those reference words
+        for which the recognizer supplied an incorrect word.
+
+
+FALSELY RECOGNIZED               Total                 (4)
+                                 With >=  1 occurrences (4)
+
+   1:    1  ->  dus
+   2:    1  ->  hij
+   3:    1  ->  onderdrukt
+   4:    1  ->  wel
+     -------
+         4
+
+
+* NOTE: The 'Falsely Recognized' words are those hypothesis words
+        which the recognizer incorrectly substituted for a reference word.
+

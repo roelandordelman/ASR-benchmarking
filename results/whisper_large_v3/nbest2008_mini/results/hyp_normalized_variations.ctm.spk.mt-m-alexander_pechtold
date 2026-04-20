@@ -1,0 +1,164 @@
+SCORING FOR SPEAKER: mt-m-alexander_pechtold
+     of /input/hyp_normalized_variations.ctm
+
+SENTENCE RECOGNITION PERFORMANCE
+
+ sentences                                          15
+ with errors                            100.0%   (  15)
+
+   with substitutions                    80.0%   (  12)
+   with deletions                       100.0%   (  15)
+   with insertions                       20.0%   (   3)
+
+
+WORD RECOGNITION PERFORMANCE
+
+Percent Total Error       =   21.3%   ( 118)
+
+Percent Correct           =   79.4%   ( 439)
+
+Percent Substitution      =    4.5%   (  25)
+Percent Deletions         =   16.1%   (  89)
+Percent Insertions        =    0.7%   (   4)
+Percent Word Accuracy     =   78.7%
+
+
+Ref. words                =           ( 553)
+Hyp. words                =           ( 468)
+Aligned words             =           ( 557)
+
+CONFUSION PAIRS                  Total                 (23)
+                                 With >=  1 occurrences (23)
+
+   1:    2  ->  een ==> de
+   2:    2  ->  zo'n ==> een
+   3:    1  ->  betaalbaarder ==> betaalbaar
+   4:    1  ->  betutteling ==> betusseling
+   5:    1  ->  bij ==> mee
+   6:    1  ->  dat ==> het
+   7:    1  ->  dus ==> de
+   8:    1  ->  er ==> hadden
+   9:    1  ->  gehandicapt ==> gehandicapte
+  10:    1  ->  gemogen ==> afgemogen
+  11:    1  ->  gevochten ==> gevocht
+  12:    1  ->  klauwen ==> klauw
+  13:    1  ->  op ==> erop
+  14:    1  ->  preambules ==> preambule
+  15:    1  ->  procenthesitation ==> er
+  16:    1  ->  procenthesitation ==> eromheen
+  17:    1  ->  procenthesitation ==> ja
+  18:    1  ->  procenthesitation ==> weer
+  19:    1  ->  te ==> het
+  20:    1  ->  v- ==> net
+  21:    1  ->  vergeleken ==> vergelijking
+  22:    1  ->  wurggreep ==> leurgreep
+  23:    1  ->  zijn ==> een
+     -------
+        25
+
+
+
+INSERTIONS                       Total                 (3)
+                                 With >=  1 occurrences (3)
+
+   1:    2  ->  zo
+   2:    1  ->  in
+   3:    1  ->  z
+     -------
+         4
+
+
+
+DELETIONS                        Total                 (24)
+                                 With >=  1 occurrences (24)
+
+   1:   48  ->  procenthesitation
+   2:    6  ->  voor
+   3:    5  ->  ja
+   4:    3  ->  de
+   5:    3  ->  het
+   6:    2  ->  daar
+   7:    2  ->  dat
+   8:    2  ->  er
+   9:    2  ->  in
+  10:    2  ->  nou
+  11:    1  ->  af
+  12:    1  ->  daarnet
+  13:    1  ->  dan
+  14:    1  ->  en
+  15:    1  ->  had
+  16:    1  ->  ik
+  17:    1  ->  is
+  18:    1  ->  maar
+  19:    1  ->  nee
+  20:    1  ->  nog
+  21:    1  ->  omheen
+  22:    1  ->  rond
+  23:    1  ->  weer
+  24:    1  ->  zeg
+     -------
+        89
+
+
+
+SUBSTITUTIONS                    Total                 (20)
+                                 With >=  1 occurrences (20)
+
+   1:    4  ->  procenthesitation
+   2:    2  ->  een
+   3:    2  ->  zo'n
+   4:    1  ->  betaalbaarder
+   5:    1  ->  betutteling
+   6:    1  ->  bij
+   7:    1  ->  dat
+   8:    1  ->  dus
+   9:    1  ->  er
+  10:    1  ->  gehandicapt
+  11:    1  ->  gemogen
+  12:    1  ->  gevochten
+  13:    1  ->  klauwen
+  14:    1  ->  op
+  15:    1  ->  preambules
+  16:    1  ->  te
+  17:    1  ->  v-
+  18:    1  ->  vergeleken
+  19:    1  ->  wurggreep
+  20:    1  ->  zijn
+     -------
+        25
+
+
+* NOTE: The 'Substitution' words are those reference words
+        for which the recognizer supplied an incorrect word.
+
+
+FALSELY RECOGNIZED               Total                 (20)
+                                 With >=  1 occurrences (20)
+
+   1:    3  ->  de
+   2:    3  ->  een
+   3:    2  ->  het
+   4:    1  ->  afgemogen
+   5:    1  ->  betaalbaar
+   6:    1  ->  betusseling
+   7:    1  ->  er
+   8:    1  ->  eromheen
+   9:    1  ->  erop
+  10:    1  ->  gehandicapte
+  11:    1  ->  gevocht
+  12:    1  ->  hadden
+  13:    1  ->  ja
+  14:    1  ->  klauw
+  15:    1  ->  leurgreep
+  16:    1  ->  mee
+  17:    1  ->  net
+  18:    1  ->  preambule
+  19:    1  ->  vergelijking
+  20:    1  ->  weer
+     -------
+        25
+
+
+* NOTE: The 'Falsely Recognized' words are those hypothesis words
+        which the recognizer incorrectly substituted for a reference word.
+

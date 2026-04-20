@@ -1,0 +1,147 @@
+SCORING FOR SPEAKER: ms-n-m-frank_heemskerk
+     of /input/hyp_normalized_variations.ctm
+
+SENTENCE RECOGNITION PERFORMANCE
+
+ sentences                                          12
+ with errors                             91.7%   (  11)
+
+   with substitutions                    50.0%   (   6)
+   with deletions                        66.7%   (   8)
+   with insertions                       33.3%   (   4)
+
+
+WORD RECOGNITION PERFORMANCE
+
+Percent Total Error       =   24.0%   (  75)
+
+Percent Correct           =   90.1%   ( 281)
+
+Percent Substitution      =    3.8%   (  12)
+Percent Deletions         =    6.1%   (  19)
+Percent Insertions        =   14.1%   (  44)
+Percent Word Accuracy     =   76.0%
+
+
+Ref. words                =           ( 312)
+Hyp. words                =           ( 337)
+Aligned words             =           ( 356)
+
+CONFUSION PAIRS                  Total                 (12)
+                                 With >=  1 occurrences (12)
+
+   1:    1  ->  aan ==> daaraan
+   2:    1  ->  bepaald ==> het
+   3:    1  ->  carien ==> oekraïne
+   4:    1  ->  dan ==> we
+   5:    1  ->  dat ==> het
+   6:    1  ->  door ==> de
+   7:    1  ->  gennip ==> gennep
+   8:    1  ->  hoe ==> dan
+   9:    1  ->  krijg ==> krijgen
+  10:    1  ->  procenthesitation ==> einde
+  11:    1  ->  procenthesitation ==> ik
+  12:    1  ->  weer ==> echter
+     -------
+        12
+
+
+
+INSERTIONS                       Total                 (33)
+                                 With >=  1 occurrences (33)
+
+   1:    5  ->  op
+   2:    4  ->  de
+   3:    3  ->  ja
+   4:    2  ->  een
+   5:    2  ->  het
+   6:    1  ->  bepaalde
+   7:    1  ->  best
+   8:    1  ->  bij
+   9:    1  ->  en
+  10:    1  ->  groot
+  11:    1  ->  kandidatenlijst
+  12:    1  ->  kwam
+  13:    1  ->  lage
+  14:    1  ->  manier
+  15:    1  ->  mij
+  16:    1  ->  misschien
+  17:    1  ->  nog
+  18:    1  ->  ook
+  19:    1  ->  pleister
+  20:    1  ->  plek
+  21:    1  ->  staan
+  22:    1  ->  te
+  23:    1  ->  teleurstelling
+  24:    1  ->  toen
+  25:    1  ->  u
+  26:    1  ->  verkiezingen
+  27:    1  ->  volgens
+  28:    1  ->  vrij
+  29:    1  ->  want
+  30:    1  ->  was
+  31:    1  ->  wel
+  32:    1  ->  wonden
+  33:    1  ->  zodat
+     -------
+        44
+
+
+
+DELETIONS                        Total                 (6)
+                                 With >=  1 occurrences (6)
+
+   1:   13  ->  procenthesitation
+   2:    2  ->  hè
+   3:    1  ->  dat
+   4:    1  ->  echt
+   5:    1  ->  er
+   6:    1  ->  ook
+     -------
+        19
+
+
+
+SUBSTITUTIONS                    Total                 (11)
+                                 With >=  1 occurrences (11)
+
+   1:    2  ->  procenthesitation
+   2:    1  ->  aan
+   3:    1  ->  bepaald
+   4:    1  ->  carien
+   5:    1  ->  dan
+   6:    1  ->  dat
+   7:    1  ->  door
+   8:    1  ->  gennip
+   9:    1  ->  hoe
+  10:    1  ->  krijg
+  11:    1  ->  weer
+     -------
+        12
+
+
+* NOTE: The 'Substitution' words are those reference words
+        for which the recognizer supplied an incorrect word.
+
+
+FALSELY RECOGNIZED               Total                 (11)
+                                 With >=  1 occurrences (11)
+
+   1:    2  ->  het
+   2:    1  ->  daaraan
+   3:    1  ->  dan
+   4:    1  ->  de
+   5:    1  ->  echter
+   6:    1  ->  einde
+   7:    1  ->  gennep
+   8:    1  ->  ik
+   9:    1  ->  krijgen
+  10:    1  ->  oekraïne
+  11:    1  ->  we
+     -------
+        12
+
+
+* NOTE: The 'Falsely Recognized' words are those hypothesis words
+        which the recognizer incorrectly substituted for a reference word.
+

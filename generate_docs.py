@@ -139,7 +139,7 @@ def write_system_pages(summaries, systems):
         meta = load_yaml(SYSTEMS_DIR / sys_id / "system.yaml")
         sys_summaries = [s for s in summaries if s["system"] == sys_id]
         rows = [
-            f"| [{s['corpus']}](../corpora/{s['corpus']}.md) | {fmt_wer(s['overall_wer'])} | {s.get('rtf', '—')} |"
+            f"| [{s['corpus']}](../corpora/{s['corpus']}.md) | {fmt_wer(s['overall_wer'])} |"
             for s in sys_summaries
         ]
         # Use hardware from the most recent run
@@ -163,8 +163,8 @@ title: "{meta.get('name', sys_id)}"
 
 ## Results
 
-| Corpus | WER | RTF |
-|--------|-----|-----|
+| Corpus | WER |
+|--------|-----|
 """ + "\n".join(rows) + f"\n\n{hw_section}\n"
         (DOCS_DIR / "systems" / f"{sys_id}.md").write_text(content)
         print(f"  wrote docs/systems/{sys_id}.md")

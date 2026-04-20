@@ -1,0 +1,123 @@
+SCORING FOR SPEAKER: fs-f-marieke_de_vries
+     of /input/hyp_normalized_variations.ctm
+
+SENTENCE RECOGNITION PERFORMANCE
+
+ sentences                                          15
+ with errors                             60.0%   (   9)
+
+   with substitutions                    46.7%   (   7)
+   with deletions                        13.3%   (   2)
+   with insertions                       53.3%   (   8)
+
+
+WORD RECOGNITION PERFORMANCE
+
+Percent Total Error       =   17.7%   (  36)
+
+Percent Correct           =   92.1%   ( 187)
+
+Percent Substitution      =    6.4%   (  13)
+Percent Deletions         =    1.5%   (   3)
+Percent Insertions        =    9.9%   (  20)
+Percent Word Accuracy     =   82.3%
+
+
+Ref. words                =           ( 203)
+Hyp. words                =           ( 220)
+Aligned words             =           ( 223)
+
+CONFUSION PAIRS                  Total                 (10)
+                                 With >=  1 occurrences (10)
+
+   1:    4  ->  türkiyemspor ==> spoor
+   2:    1  ->  bekende ==> bekend
+   3:    1  ->  een ==> hij
+   4:    1  ->  halfstok ==> stok
+   5:    1  ->  nedim ==> nedem
+   6:    1  ->  negenennegentig ==> negenhonderdnegenennegentig
+   7:    1  ->  negentien ==> duizend
+   8:    1  ->  procenthesitation ==> oud
+   9:    1  ->  twintig ==> ado20
+  10:    1  ->  voorzitter ==> -voorzitter
+     -------
+        13
+
+
+
+INSERTIONS                       Total                 (16)
+                                 With >=  1 occurrences (16)
+
+   1:    4  ->  turkium
+   2:    2  ->  is
+   3:    1  ->  bekend
+   4:    1  ->  dat
+   5:    1  ->  de
+   6:    1  ->  doen
+   7:    1  ->  half
+   8:    1  ->  het
+   9:    1  ->  je
+  10:    1  ->  kan
+  11:    1  ->  minste
+  12:    1  ->  natuurlijk
+  13:    1  ->  nul
+  14:    1  ->  wat
+  15:    1  ->  we
+  16:    1  ->  wel
+     -------
+        20
+
+
+
+DELETIONS                        Total                 (3)
+                                 With >=  1 occurrences (3)
+
+   1:    1  ->  ado
+   2:    1  ->  de
+   3:    1  ->  oud-
+     -------
+         3
+
+
+
+SUBSTITUTIONS                    Total                 (10)
+                                 With >=  1 occurrences (10)
+
+   1:    4  ->  türkiyemspor
+   2:    1  ->  bekende
+   3:    1  ->  een
+   4:    1  ->  halfstok
+   5:    1  ->  nedim
+   6:    1  ->  negenennegentig
+   7:    1  ->  negentien
+   8:    1  ->  procenthesitation
+   9:    1  ->  twintig
+  10:    1  ->  voorzitter
+     -------
+        13
+
+
+* NOTE: The 'Substitution' words are those reference words
+        for which the recognizer supplied an incorrect word.
+
+
+FALSELY RECOGNIZED               Total                 (10)
+                                 With >=  1 occurrences (10)
+
+   1:    4  ->  spoor
+   2:    1  ->  -voorzitter
+   3:    1  ->  ado20
+   4:    1  ->  bekend
+   5:    1  ->  duizend
+   6:    1  ->  hij
+   7:    1  ->  nedem
+   8:    1  ->  negenhonderdnegenennegentig
+   9:    1  ->  oud
+  10:    1  ->  stok
+     -------
+        13
+
+
+* NOTE: The 'Falsely Recognized' words are those hypothesis words
+        which the recognizer incorrectly substituted for a reference word.
+

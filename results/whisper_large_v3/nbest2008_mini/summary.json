@@ -1,0 +1,18 @@
+{
+  "overall_wer": 51.2899,
+  "categories": [
+    {
+      "category": NaN,
+      "ref_words": 5073,
+      "WER": 51.71
+    },
+    {
+      "category": "verslaggeve",
+      "ref_words": 65,
+      "WER": 18.5
+    }
+  ],
+  "system": "whisper_large_v3",
+  "corpus": "nbest2008_mini",
+  "timestamp": "2026-04-20T15:52:28.204831+00:00"
+}

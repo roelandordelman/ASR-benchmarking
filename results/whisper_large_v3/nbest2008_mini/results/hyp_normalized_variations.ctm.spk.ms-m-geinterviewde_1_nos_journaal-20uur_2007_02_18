@@ -1,0 +1,96 @@
+SCORING FOR SPEAKER: ms-m-geinterviewde_1_nos_journaal-20uur_2007_02_18
+     of /input/hyp_normalized_variations.ctm
+
+SENTENCE RECOGNITION PERFORMANCE
+
+ sentences                                           4
+ with errors                            100.0%   (   4)
+
+   with substitutions                   100.0%   (   4)
+   with deletions                        50.0%   (   2)
+   with insertions                       75.0%   (   3)
+
+
+WORD RECOGNITION PERFORMANCE
+
+Percent Total Error       =   30.0%   (  15)
+
+Percent Correct           =   76.0%   (  38)
+
+Percent Substitution      =   14.0%   (   7)
+Percent Deletions         =   10.0%   (   5)
+Percent Insertions        =    6.0%   (   3)
+Percent Word Accuracy     =   70.0%
+
+
+Ref. words                =           (  50)
+Hyp. words                =           (  48)
+Aligned words             =           (  53)
+
+CONFUSION PAIRS                  Total                 (5)
+                                 With >=  1 occurrences (5)
+
+   1:    2  ->  kampioenschappen ==> kampioenschap
+   2:    2  ->  türkiyemspor ==> spoor
+   3:    1  ->  procenthesitation ==> zondag
+   4:    1  ->  zeventienjarige ==> -jarige
+   5:    1  ->  zondagamateurs ==> aanwezig
+     -------
+         7
+
+
+
+INSERTIONS                       Total                 (2)
+                                 With >=  1 occurrences (2)
+
+   1:    2  ->  turkium
+   2:    1  ->  zeventien
+     -------
+         3
+
+
+
+DELETIONS                        Total                 (5)
+                                 With >=  1 occurrences (5)
+
+   1:    1  ->  als
+   2:    1  ->  daar
+   3:    1  ->  is
+   4:    1  ->  je
+   5:    1  ->  procenthesitation
+     -------
+         5
+
+
+
+SUBSTITUTIONS                    Total                 (5)
+                                 With >=  1 occurrences (5)
+
+   1:    2  ->  kampioenschappen
+   2:    2  ->  türkiyemspor
+   3:    1  ->  procenthesitation
+   4:    1  ->  zeventienjarige
+   5:    1  ->  zondagamateurs
+     -------
+         7
+
+
+* NOTE: The 'Substitution' words are those reference words
+        for which the recognizer supplied an incorrect word.
+
+
+FALSELY RECOGNIZED               Total                 (5)
+                                 With >=  1 occurrences (5)
+
+   1:    2  ->  kampioenschap
+   2:    2  ->  spoor
+   3:    1  ->  -jarige
+   4:    1  ->  aanwezig
+   5:    1  ->  zondag
+     -------
+         7
+
+
+* NOTE: The 'Falsely Recognized' words are those hypothesis words
+        which the recognizer incorrectly substituted for a reference word.
+

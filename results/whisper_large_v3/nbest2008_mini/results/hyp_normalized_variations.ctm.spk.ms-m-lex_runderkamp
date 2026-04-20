@@ -1,0 +1,246 @@
+SCORING FOR SPEAKER: ms-m-lex_runderkamp
+     of /input/hyp_normalized_variations.ctm
+
+SENTENCE RECOGNITION PERFORMANCE
+
+ sentences                                          19
+ with errors                             89.5%   (  17)
+
+   with substitutions                    31.6%   (   6)
+   with deletions                        89.5%   (  17)
+   with insertions                        0.0%   (   0)
+
+
+WORD RECOGNITION PERFORMANCE
+
+Percent Total Error       =   92.5%   ( 235)
+
+Percent Correct           =    7.5%   (  19)
+
+Percent Substitution      =    7.1%   (  18)
+Percent Deletions         =   85.4%   ( 217)
+Percent Insertions        =    0.0%   (   0)
+Percent Word Accuracy     =    7.5%
+
+
+Ref. words                =           ( 254)
+Hyp. words                =           (  37)
+Aligned words             =           ( 254)
+
+CONFUSION PAIRS                  Total                 (18)
+                                 With >=  1 occurrences (18)
+
+   1:    1  ->  aanvullende ==> 0.95
+   2:    1  ->  advocaat ==> 0.00
+   3:    1  ->  bedreiging ==> 0.95
+   4:    1  ->  concrete ==> 0.95
+   5:    1  ->  een ==> 0.95
+   6:    1  ->  een ==> 0.96
+   7:    1  ->  genoemd ==> 0.95
+   8:    1  ->  hebben ==> 0.95
+   9:    1  ->  is ==> 0.96
+  10:    1  ->  misbruikt ==> 0.95
+  11:    1  ->  moszkowicz ==> 0.95
+  12:    1  ->  nooit ==> 0.95
+  13:    1  ->  om ==> 0.95
+  14:    1  ->  strekking ==> 0.00
+  15:    1  ->  van ==> 0.95
+  16:    1  ->  woordvoerder ==> 0.95
+  17:    1  ->  zetten ==> 0.00
+  18:    1  ->  zichzelf ==> 0.95
+     -------
+        18
+
+
+
+INSERTIONS                       Total                 (0)
+                                 With >=  1 occurrences (0)
+
+     -------
+         0
+
+
+
+DELETIONS                        Total                 (134)
+                                 With >=  1 occurrences (134)
+
+   1:   20  ->  de
+   2:    8  ->  het
+   3:    7  ->  van
+   4:    6  ->  en
+   5:    5  ->  een
+   6:    5  ->  moszkowicz
+   7:    4  ->  met
+   8:    4  ->  politie
+   9:    3  ->  hoofdofficier
+  10:    3  ->  in
+  11:    3  ->  ministerie
+  12:    3  ->  nctb
+  13:    3  ->  openbaar
+  14:    2  ->  advocaat
+  15:    2  ->  al
+  16:    2  ->  binnen
+  17:    2  ->  dat
+  18:    2  ->  deze
+  19:    2  ->  die
+  20:    2  ->  eenheid
+  21:    2  ->  holleeder
+  22:    2  ->  joustra
+  23:    2  ->  justitie
+  24:    2  ->  kwestie
+  25:    2  ->  maar
+  26:    2  ->  naar
+  27:    2  ->  over
+  28:    2  ->  te
+  29:    2  ->  tjibbe
+  30:    2  ->  twee
+  31:    2  ->  vond
+  32:    2  ->  vorige
+  33:    2  ->  week
+  34:    2  ->  weken
+  35:    2  ->  zijn
+  36:    1  ->  aan
+  37:    1  ->  actie
+  38:    1  ->  aldus
+  39:    1  ->  als
+  40:    1  ->  ambassadeurs
+  41:    1  ->  amsterdam
+  42:    1  ->  amsterdamse
+  43:    1  ->  analisten
+  44:    1  ->  andere
+  45:    1  ->  belangenverstrengeling
+  46:    1  ->  betrokkenen
+  47:    1  ->  beveiliging
+  48:    1  ->  beveiligt
+  49:    1  ->  bewaking
+  50:    1  ->  bij
+  51:    1  ->  binnengekregen
+  52:    1  ->  boven
+  53:    1  ->  bronnen
+  54:    1  ->  coördinator
+  55:    1  ->  criminele
+  56:    1  ->  deur
+  57:    1  ->  documenten
+  58:    1  ->  dreigend
+  59:    1  ->  dus
+  60:    1  ->  erop
+  61:    1  ->  familie
+  62:    1  ->  fractievoorzitters
+  63:    1  ->  geen
+  64:    1  ->  geleden
+  65:    1  ->  gelekt
+  66:    1  ->  genoeg
+  67:    1  ->  had
+  68:    1  ->  heeft
+  69:    1  ->  hij
+  70:    1  ->  informatie
+  71:    1  ->  inlichtingendienst
+  72:    1  ->  jort
+  73:    1  ->  kant
+  74:    1  ->  kantoor
+  75:    1  ->  kelder
+  76:    1  ->  koninklijke
+  77:    1  ->  kunnen
+  78:    1  ->  lang
+  79:    1  ->  leden
+  80:    1  ->  leek
+  81:    1  ->  leo
+  82:    1  ->  liep
+  83:    1  ->  maanden
+  84:    1  ->  maffiamaatje
+  85:    1  ->  meer
+  86:    1  ->  melding
+  87:    1  ->  men
+  88:    1  ->  meteen
+  89:    1  ->  ministers
+  90:    1  ->  namens
+  91:    1  ->  nationaal
+  92:    1  ->  niet
+  93:    1  ->  nieuwe
+  94:    1  ->  om
+  95:    1  ->  omdat
+  96:    1  ->  ontstaan
+  97:    1  ->  overdreven
+  98:    1  ->  overleg
+  99:    1  ->  probeert
+ 100:    1  ->  proces
+ 101:    1  ->  publiciteitsgolf
+ 102:    1  ->  rechtstreeks
+ 103:    1  ->  rond
+ 104:    1  ->  schoof
+ 105:    1  ->  seconde
+ 106:    1  ->  stond
+ 107:    1  ->  straat
+ 108:    1  ->  tegen
+ 109:    1  ->  terreurcoördinator
+ 110:    1  ->  terrorismebestrijding
+ 111:    1  ->  tip
+ 112:    1  ->  tipgever
+ 113:    1  ->  toen
+ 114:    1  ->  trucje
+ 115:    1  ->  twijfelde
+ 116:    1  ->  uit
+ 117:    1  ->  veilig
+ 118:    1  ->  verschillende
+ 119:    1  ->  verwijt
+ 120:    1  ->  verwijten
+ 121:    1  ->  volgens
+ 122:    1  ->  voor
+ 123:    1  ->  vreesde
+ 124:    1  ->  vrijdagavond
+ 125:    1  ->  waarschuwen
+ 126:    1  ->  want
+ 127:    1  ->  willem
+ 128:    1  ->  wit
+ 129:    1  ->  zagen
+ 130:    1  ->  ze
+ 131:    1  ->  zes
+ 132:    1  ->  zou
+ 133:    1  ->  zouden
+ 134:    1  ->  zwaar
+     -------
+       217
+
+
+
+SUBSTITUTIONS                    Total                 (17)
+                                 With >=  1 occurrences (17)
+
+   1:    2  ->  een
+   2:    1  ->  aanvullende
+   3:    1  ->  advocaat
+   4:    1  ->  bedreiging
+   5:    1  ->  concrete
+   6:    1  ->  genoemd
+   7:    1  ->  hebben
+   8:    1  ->  is
+   9:    1  ->  misbruikt
+  10:    1  ->  moszkowicz
+  11:    1  ->  nooit
+  12:    1  ->  om
+  13:    1  ->  strekking
+  14:    1  ->  van
+  15:    1  ->  woordvoerder
+  16:    1  ->  zetten
+  17:    1  ->  zichzelf
+     -------
+        18
+
+
+* NOTE: The 'Substitution' words are those reference words
+        for which the recognizer supplied an incorrect word.
+
+
+FALSELY RECOGNIZED               Total                 (3)
+                                 With >=  1 occurrences (3)
+
+   1:   13  ->  0.95
+   2:    3  ->  0.00
+   3:    2  ->  0.96
+     -------
+        18
+
+
+* NOTE: The 'Falsely Recognized' words are those hypothesis words
+        which the recognizer incorrectly substituted for a reference word.
+

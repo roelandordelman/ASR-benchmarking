@@ -1,0 +1,134 @@
+SCORING FOR SPEAKER: ms-m-martijn_van_der_kooi
+     of /input/hyp_normalized_variations.ctm
+
+SENTENCE RECOGNITION PERFORMANCE
+
+ sentences                                           7
+ with errors                            100.0%   (   7)
+
+   with substitutions                    57.1%   (   4)
+   with deletions                       100.0%   (   7)
+   with insertions                       85.7%   (   6)
+
+
+WORD RECOGNITION PERFORMANCE
+
+Percent Total Error       =   26.7%   (  68)
+
+Percent Correct           =   85.1%   ( 217)
+
+Percent Substitution      =    3.5%   (   9)
+Percent Deletions         =   11.4%   (  29)
+Percent Insertions        =   11.8%   (  30)
+Percent Word Accuracy     =   73.3%
+
+
+Ref. words                =           ( 255)
+Hyp. words                =           ( 256)
+Aligned words             =           ( 285)
+
+CONFUSION PAIRS                  Total                 (8)
+                                 With >=  1 occurrences (8)
+
+   1:    2  ->  hirsch ==> heerst
+   2:    1  ->  aboutaleb ==> talib
+   3:    1  ->  beziggehouden ==> gehouden
+   4:    1  ->  kabinet ==> -kabinet
+   5:    1  ->  met ==> en
+   6:    1  ->  peter ==> -peter
+   7:    1  ->  procenthesitation ==> bezig
+   8:    1  ->  staat ==> achterstaat
+     -------
+         9
+
+
+
+INSERTIONS                       Total                 (27)
+                                 With >=  1 occurrences (27)
+
+   1:    3  ->  ja
+   2:    2  ->  maria
+   3:    1  ->  aantal
+   4:    1  ->  abu
+   5:    1  ->  af
+   6:    1  ->  al
+   7:    1  ->  dat
+   8:    1  ->  de
+   9:    1  ->  denk
+  10:    1  ->  der
+  11:    1  ->  dus
+  12:    1  ->  economische
+  13:    1  ->  een
+  14:    1  ->  er
+  15:    1  ->  hij
+  16:    1  ->  hoeven
+  17:    1  ->  ik
+  18:    1  ->  mij
+  19:    1  ->  u
+  20:    1  ->  van
+  21:    1  ->  volgens
+  22:    1  ->  wel
+  23:    1  ->  wilde
+  24:    1  ->  zaken
+  25:    1  ->  ze
+  26:    1  ->  zeggen
+  27:    1  ->  zijn
+     -------
+        30
+
+
+
+DELETIONS                        Total                 (9)
+                                 With >=  1 occurrences (9)
+
+   1:   19  ->  procenthesitation
+   2:    2  ->  hè
+   3:    2  ->  van
+   4:    1  ->  achter
+   5:    1  ->  dus
+   6:    1  ->  het
+   7:    1  ->  i-
+   8:    1  ->  ja
+   9:    1  ->  nou
+     -------
+        29
+
+
+
+SUBSTITUTIONS                    Total                 (8)
+                                 With >=  1 occurrences (8)
+
+   1:    2  ->  hirsch
+   2:    1  ->  aboutaleb
+   3:    1  ->  beziggehouden
+   4:    1  ->  kabinet
+   5:    1  ->  met
+   6:    1  ->  peter
+   7:    1  ->  procenthesitation
+   8:    1  ->  staat
+     -------
+         9
+
+
+* NOTE: The 'Substitution' words are those reference words
+        for which the recognizer supplied an incorrect word.
+
+
+FALSELY RECOGNIZED               Total                 (8)
+                                 With >=  1 occurrences (8)
+
+   1:    2  ->  heerst
+   2:    1  ->  -kabinet
+   3:    1  ->  -peter
+   4:    1  ->  achterstaat
+   5:    1  ->  bezig
+   6:    1  ->  en
+   7:    1  ->  gehouden
+   8:    1  ->  talib
+     -------
+         9
+
+
+* NOTE: The 'Falsely Recognized' words are those hypothesis words
+        which the recognizer incorrectly substituted for a reference word.
+

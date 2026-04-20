@@ -6,9 +6,9 @@ title: ASR NL Benchmark Results
 
 *Lower is better. Generated 2026-04-20.*
 
-| System | [example](corpora/example.md) |
-|-------|-------|
-| [whisper_large_v3](systems/whisper_large_v3.md) | 7.5% |
+| System | [example](corpora/example.md) | [nbest2008_mini](corpora/nbest2008_mini.md) |
+|-------|-------|-------|
+| [whisper_large_v3](systems/whisper_large_v3.md) | 7.5% | 51.3% |
 
 ---
 
