@@ -1,0 +1,22 @@
+id: jasmin_nl_compq
+name: "Jasmin-CGN NL — Read Speech (comp-q)"
+description: >
+  Dutch read speech from Jasmin-CGN. All 5 speaker groups:
+  native children (7-11), native teens (12-16), non-native minors (7-16),
+  non-native adults (18-60, CEF A1-B2), native elderly (65+).
+  STM category tags encode component, group, and gender for per-category WER.
+language: nl
+domain: read_speech
+size_hours: 21.3
+license: restricted
+access: request
+contact: r.ordelman@beeldengeluid.nl
+notes: >
+  comp-p (HMI/conversational) requires additional audio preprocessing to silence
+  TTS machine-voice bleed-through before ASR — not included here.
+  See scripts/jasmin_to_stm.py --component comp-p for reference transcript generation.
+sftp:
+  host: u540409.your-storagebox.de
+  port: 23
+  user: u540409
+  path: asr-benchmark/jasmin_nl_compq/audio
