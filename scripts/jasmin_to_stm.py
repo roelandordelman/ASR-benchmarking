@@ -178,7 +178,7 @@ def convert(lang: str, components: list, groups: list, output: Path, dry_run: bo
             # Normalise Jasmin transcription conventions:
             text = re.sub(r"\[.*?\]", "", text)      # [laughter], [noise] etc.
             text = re.sub(r"\bggg+\b", "", text)      # filled pauses / laughter marker
-            text = re.sub(r"\*", "", text)            # truncation marker (omge*ving → omgeving)
+            text = re.sub(r"\*[a-z]?", "", text)     # annotation codes: hun*f→hun, Bolla*→Bolla
             text = re.sub(r"\+", "", text)            # overlap marker
             text = re.sub(r"[<>]", "", text)          # angle bracket annotations
             text = re.sub(r"\s+", " ", text).strip()
