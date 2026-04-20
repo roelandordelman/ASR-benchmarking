@@ -100,6 +100,8 @@ title: "{meta.get('name', corpus_id)}"
 
 {meta.get('description', '')}
 
+{"**Reference:** " + meta.get('reference', '') if meta.get('reference') else ''}
+
 ## Results
 
 | System | WER |

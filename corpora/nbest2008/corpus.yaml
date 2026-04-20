@@ -1,6 +1,7 @@
 id: nbest2008
 name: "N-Best 2008 (BN-NL)"
 description: "Dutch broadcast news evaluation corpus from the N-Best 2008 evaluation campaign. 15 recordings, ~541 minutes."
+reference: "Van Leeuwen, D.A., Kessens, J., Sanders, E. & Van den Heuvel, H. (2008). Results of the N-Best 2008 Dutch Speech Recognition Evaluation. https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=32b10cb0f4cb99ba934f5be5066638a5ad9b19f2"
 language: nl
 domain: broadcast_news
 size_hours: 9.0
