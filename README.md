@@ -65,6 +65,12 @@ python3 scripts/fetch_corpus.py nbest2008_mini --list   # inspect remote without
 3. Place audio locally at `$ASR_CORPUS_ROOT/{id}/audio/`
 4. Run `python3 orchestrate.py --corpus {id}`
 
+### Corpus annotation coverage
+
+Some corpora (e.g. N-Best 2008) only annotate selected segments of each audio file — not the full recording. Running ASR on the full file causes Whisper to transcribe unannotated regions, inflating the insertion rate and producing unrealistically high WER (we observed ~47% instead of the expected ~10%).
+
+Set `segment_audio: true` in `corpus.yaml` for these corpora. The orchestrator will then pass the reference STM to the ASR system, which uses it to extract and transcribe only the annotated segments (matching the [UT methodology](https://opensource-spraakherkenning-nl.github.io/ASR_NL_results/)). Timestamps are offset back to the original file timeline before scoring.
+
 ## Adding a system
 
 1. Create `systems/{id}/` with:
@@ -77,11 +83,12 @@ See `systems/whisper_large_v3/` as a reference implementation.
 
 ## Corpus overview
 
-| Corpus | Domain | Size | Access |
-|--------|--------|------|--------|
-| `example` | Broadcast news | ~2 min | Public (bundled) |
-| `nbest2008_mini` | Broadcast news | ~46 min | Request |
-| `nbest2008` | Broadcast news | ~541 min | Request |
+| Corpus | Domain | Size | Access | Notes |
+|--------|--------|------|--------|-------|
+| `example` | Broadcast news | ~2 min | Public (bundled) | |
+| `nbest2008_mini` | Broadcast news | ~46 min | Request | Partial annotation — uses `segment_audio` |
+| `nbest2008` | Broadcast news | ~541 min | Request | Partial annotation — uses `segment_audio` |
+| `jasmin_nl_compq` | Read + spontaneous speech (children & adults) | ~21 h | Request | Fully annotated |
 
 ## Nightly HuggingFace watcher
 

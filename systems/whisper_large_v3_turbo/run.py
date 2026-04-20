@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Transcribe a directory of audio files using faster-whisper (large-v3).
+"""Transcribe a directory of audio files using faster-whisper (large-v3-turbo).
 Output: CTM format — filename channel start_time duration word confidence
 """
 import argparse
@@ -11,10 +11,10 @@ from whisper_run import transcribe_to_ctm
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Whisper large-v3 → CTM")
+    parser = argparse.ArgumentParser(description="Whisper large-v3-turbo → CTM")
     parser.add_argument("--audio-dir", required=True)
     parser.add_argument("--output-ctm", required=True)
-    parser.add_argument("--model", default="large-v3")
+    parser.add_argument("--model", default="large-v3-turbo")
     parser.add_argument("--language", default="nl")
     parser.add_argument("--reference-stm", default=None)
     args = parser.parse_args()

@@ -1,0 +1,7 @@
+id: whisper_large_v3_turbo
+name: "Whisper large-v3-turbo"
+description: "OpenAI Whisper large-v3-turbo via faster-whisper. ~8x faster than large-v3 with competitive accuracy."
+hf_model_id: "openai/whisper-large-v3-turbo"
+hf_model_revision: "main"
+language: nl
+type: whisper

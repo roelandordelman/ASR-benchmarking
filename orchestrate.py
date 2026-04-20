@@ -82,14 +82,15 @@ def try_fetch_audio(corpus: Path) -> Optional[Path]:
     return resolve_audio_dir(corpus)
 
 
-def run_asr(system: Path, audio_dir: Path, work_dir: Path) -> Path:
+def run_asr(system: Path, audio_dir: Path, work_dir: Path, corpus_meta: dict) -> Path:
     ctm_path = work_dir / "hyp.ctm"
     run_script = system / "run.py"
     print(f"  → ASR: {system.name} on {audio_dir}")
-    subprocess.run(
-        [sys.executable, str(run_script), "--audio-dir", str(audio_dir), "--output-ctm", str(ctm_path)],
-        check=True,
-    )
+    cmd = [sys.executable, str(run_script), "--audio-dir", str(audio_dir), "--output-ctm", str(ctm_path)]
+    if corpus_meta.get("segment_audio"):
+        cmd += ["--reference-stm", str(work_dir / "reference.stm")]
+        print(f"  → Segmented transcription (reference-guided)")
+    subprocess.run(cmd, check=True)
     return ctm_path
 
 
@@ -182,7 +183,7 @@ def main():
                 if audio_dir is None:
                     print(f"  [skip] audio not found — set ASR_CORPUS_ROOT or add corpora/{corpus.name}/audio/")
                     continue
-                run_asr(system, audio_dir, work_dir)
+                run_asr(system, audio_dir, work_dir, corpus_meta)
                 asr_duration_s = time.time() - t_asr_start
 
             results_subdir = run_eval(system, work_dir)
