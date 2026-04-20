@@ -23,7 +23,7 @@
     "chip": "Apple M4 Pro",
     "cores": "14-core (10P+4E)",
     "ram_gb": "48",
-    "device": "cpu",
+    "device": "cpu (Apple Accelerate/AMX)",
     "ctranslate2": "4.7.1"
   }
 }

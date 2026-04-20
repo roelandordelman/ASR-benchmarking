@@ -27,7 +27,7 @@ OpenAI Whisper large-v3 via faster-whisper. Word-level timestamps enable direct 
 | **Chip** | Apple M4 Pro |
 | **Cores** | 14-core (10P+4E) |
 | **RAM (GB)** | 48 |
-| **Accelerator** | cpu |
+| **Accelerator** | cpu (Apple Accelerate/AMX) |
 | **OS** | Darwin 25.4.0 |
 | **CTranslate2** | 4.7.1 |
 | **Python** | 3.9.6 |

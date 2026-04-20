@@ -45,19 +45,30 @@ def _parse_cores(s: str) -> str:
 
 
 def _accelerator() -> dict:
-    device = "cpu"
+    # 1. Check CUDA via torch
     try:
         import torch
         if torch.cuda.is_available():
-            device = "cuda"
             gpu_name = torch.cuda.get_device_name(0)
             vram_gb  = round(torch.cuda.get_device_properties(0).total_memory / 1e9, 1)
-            return {"device": device, "gpu": gpu_name, "vram_gb": vram_gb}
-        if torch.backends.mps.is_available():
-            device = "mps"
+            return {"device": "cuda", "gpu": gpu_name, "vram_gb": vram_gb}
     except ImportError:
         pass
-    return {"device": device}
+
+    # 2. Check ctranslate2 Metal (Apple Silicon MPS)
+    try:
+        import ctranslate2
+        metal_types = ctranslate2.get_supported_compute_types("metal")
+        if metal_types:
+            return {"device": "metal (MPS)"}
+    except Exception:
+        pass
+
+    # 3. Apple Silicon CPU uses Accelerate/AMX — label it clearly
+    if platform.machine() == "arm64" and platform.system() == "Darwin":
+        return {"device": "cpu (Apple Accelerate/AMX)"}
+
+    return {"device": "cpu"}
 
 
 def detect() -> dict:
