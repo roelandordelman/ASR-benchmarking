@@ -17,4 +17,5 @@ title: "N-Best 2008 Mini (BN-NL)"
 
 | System | WER |
 |--------|-----|
-| [whisper_large_v3](../systems/whisper_large_v3.md) | 47.5% |
+| [whisper_large_v3](../systems/whisper_large_v3.md) | 17.5% |
+| [whisper_large_v3_turbo](../systems/whisper_large_v3_turbo.md) | 48.1% |

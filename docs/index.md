@@ -8,7 +8,8 @@ title: ASR NL Benchmark Results
 
 | System | [example](corpora/example.md) | [nbest2008_mini](corpora/nbest2008_mini.md) |
 |-------|-------|-------|
-| [whisper_large_v3](systems/whisper_large_v3.md) | 7.5% | 47.5% |
+| [whisper_large_v3](systems/whisper_large_v3.md) | 7.5% | 17.5% |
+| [whisper_large_v3_turbo](systems/whisper_large_v3_turbo.md) | — | 48.1% |
 
 ---
 

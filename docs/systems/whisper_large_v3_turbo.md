@@ -1,23 +1,22 @@
 ---
-title: "Whisper large-v3"
+title: "Whisper large-v3-turbo"
 ---
 
-# Whisper large-v3
+# Whisper large-v3-turbo
 
 | | |
 |---|---|
-| **HuggingFace** | [openai/whisper-large-v3](https://huggingface.co/openai/whisper-large-v3) |
+| **HuggingFace** | [openai/whisper-large-v3-turbo](https://huggingface.co/openai/whisper-large-v3-turbo) |
 | **Language** | nl |
 | **Type** | whisper |
 
-OpenAI Whisper large-v3 via faster-whisper. Word-level timestamps enable direct CTM output.
+OpenAI Whisper large-v3-turbo via faster-whisper. ~8x faster than large-v3 with competitive accuracy.
 
 ## Results
 
 | Corpus | WER |
 |--------|-----|
-| [example](../corpora/example.md) | 7.5% |
-| [nbest2008_mini](../corpora/nbest2008_mini.md) | 17.5% |
+| [nbest2008_mini](../corpora/nbest2008_mini.md) | 48.1% |
 
 ## Hardware
 
