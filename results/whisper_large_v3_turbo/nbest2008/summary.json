@@ -1,0 +1,34 @@
+{
+  "overall_wer": 16.3444,
+  "categories": [
+    {
+      "category": NaN,
+      "ref_words": 23848,
+      "WER": 16.4
+    },
+    {
+      "category": "d",
+      "ref_words": 267,
+      "WER": 16.1
+    },
+    {
+      "category": "verslaggeve",
+      "ref_words": 230,
+      "WER": 10.86
+    }
+  ],
+  "system": "whisper_large_v3_turbo",
+  "corpus": "nbest2008",
+  "timestamp": "2026-04-21T05:50:18.474719+00:00",
+  "hardware": {
+    "os": "Darwin 25.4.0",
+    "arch": "arm64",
+    "python": "3.9.6",
+    "model": "MacBook Pro (Mac16,8)",
+    "chip": "Apple M4 Pro",
+    "cores": "14-core (10P+4E)",
+    "ram_gb": "48",
+    "device": "cpu (Apple Accelerate/AMX)",
+    "ctranslate2": "4.7.1"
+  }
+}

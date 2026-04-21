@@ -17,6 +17,7 @@ OpenAI Whisper large-v3 via faster-whisper. Word-level timestamps enable direct 
 | Corpus | WER |
 |--------|-----|
 | [example](../corpora/example.md) | 7.5% |
+| [nbest2008](../corpora/nbest2008.md) | 17.6% |
 | [nbest2008_mini](../corpora/nbest2008_mini.md) | 17.5% |
 
 ## Hardware

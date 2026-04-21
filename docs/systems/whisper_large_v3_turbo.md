@@ -16,6 +16,7 @@ OpenAI Whisper large-v3-turbo via faster-whisper. ~8x faster than large-v3 with 
 
 | Corpus | WER |
 |--------|-----|
+| [nbest2008](../corpora/nbest2008.md) | 16.3% |
 | [nbest2008_mini](../corpora/nbest2008_mini.md) | 16.8% |
 
 ## Hardware

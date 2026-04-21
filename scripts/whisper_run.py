@@ -70,7 +70,8 @@ def transcribe_to_ctm(
     from faster_whisper import WhisperModel
 
     model = WhisperModel(model_size, device="auto", compute_type="int8")
-    audio_files = sorted(f for f in audio_dir.iterdir() if f.suffix.lower() in AUDIO_EXTENSIONS)
+    audio_files = sorted(f for f in audio_dir.iterdir()
+                         if f.suffix.lower() in AUDIO_EXTENSIONS and not f.name.startswith("._"))
     if not audio_files:
         raise FileNotFoundError(f"No audio files found in {audio_dir}")
 

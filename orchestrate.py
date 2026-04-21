@@ -106,9 +106,6 @@ def run_eval(system: Path, work_dir: Path) -> Path:
         "-ref", "reference.stm", "stm",
         "-kind", system.name,
     ]
-    if (work_dir / "reference.uem").exists():
-        cmd += ["-uem", "reference.uem"]
-        print(f"  → Using UEM for precise segment scoring")
     subprocess.run(cmd, check=True)
     return work_dir / "results"
 
@@ -134,6 +131,7 @@ def main():
     parser.add_argument("--use-precomputed", action="store_true",
                         help="Use corpora/X/precomputed/hyp.ctm instead of running ASR")
     parser.add_argument("--force", action="store_true", help="Re-run even if results exist")
+    parser.add_argument("--skip-asr", action="store_true", help="Skip ASR, use existing hyp.ctm and re-run eval only")
     args = parser.parse_args()
 
     corpora = get_corpora()
@@ -154,7 +152,7 @@ def main():
         for corpus in corpora:
             tag = f"{system.name} × {corpus.name}"
 
-            if summary_exists(system, corpus) and not args.force:
+            if summary_exists(system, corpus) and not args.force and not args.skip_asr:
                 print(f"[skip]  {tag}")
                 skipped += 1
                 continue
@@ -174,7 +172,13 @@ def main():
 
             corpus_meta = load_yaml(corpus / "corpus.yaml")
             t_asr_start = time.time()
-            if args.use_precomputed:
+            if args.skip_asr:
+                if not (work_dir / "hyp.ctm").exists():
+                    print(f"  [skip] no hyp.ctm found in {work_dir} — run ASR first")
+                    continue
+                print(f"  → Skipping ASR, using existing hyp.ctm")
+                asr_duration_s = None
+            elif args.use_precomputed:
                 precomputed = corpus / "precomputed" / "hyp.ctm"
                 if not precomputed.exists():
                     print(f"  [skip] no precomputed CTM at {precomputed}")
