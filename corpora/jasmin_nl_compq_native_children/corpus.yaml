@@ -7,6 +7,7 @@ domain: read_speech
 license: restricted
 access: request
 contact: r.ordelman@beeldengeluid.nl
+size_hours: 6.56
 segment_audio: true
 audio_corpus: jasmin_nl_compq
 sftp:

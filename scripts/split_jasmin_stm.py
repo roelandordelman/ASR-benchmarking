@@ -43,8 +43,22 @@ def main():
         group_lines = [l for l in lines if f",{group_id}," in l or l.startswith(";;")]
         stm_path = corpus_dir / "reference.stm"
         stm_path.write_text("".join(group_lines))
-        n_segments = sum(1 for l in group_lines if not l.startswith(";;"))
-        print(f"  {corpus_id}: {n_segments} segments → {stm_path}")
+
+        # Calculate total speech duration from STM
+        total_s = 0.0
+        n_segments = 0
+        for l in group_lines:
+            if l.startswith(";;"):
+                continue
+            parts = l.split()
+            if len(parts) >= 5:
+                try:
+                    total_s += float(parts[4]) - float(parts[3])
+                    n_segments += 1
+                except ValueError:
+                    pass
+        size_hours = round(total_s / 3600, 2)
+        print(f"  {corpus_id}: {n_segments} segments, {size_hours}h → {stm_path}")
 
         # Write corpus.yaml
         meta = {
@@ -59,6 +73,7 @@ def main():
             "license":     base_meta.get("license", "restricted"),
             "access":      base_meta.get("access", "request"),
             "contact":     base_meta.get("contact", ""),
+            "size_hours":  size_hours,
             "segment_audio": True,
             "audio_corpus": "jasmin_nl_compq",  # shared audio directory
         }
