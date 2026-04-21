@@ -90,7 +90,10 @@ def transcribe_to_ctm(
     with open(output_ctm, "w") as out:
         for audio_file in audio_files:
             stem = audio_file.stem
-            if stem in stm_segments:
+            if stm_segments:
+                # STM provided: skip files not referenced in it
+                if stem not in stm_segments:
+                    continue
                 print(f"    segmented: {stem} ({len(stm_segments[stem])} segments)")
                 for seg_start, seg_end in stm_segments[stem]:
                     dur = seg_end - seg_start

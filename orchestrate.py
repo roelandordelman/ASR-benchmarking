@@ -54,13 +54,15 @@ def summary_exists(system: Path, corpus: Path) -> bool:
     return (result_dir(system, corpus) / "summary.json").exists()
 
 
-def resolve_audio_dir(corpus: Path) -> Optional[Path]:
+def resolve_audio_dir(corpus: Path, corpus_meta: Optional[dict] = None) -> Optional[Path]:
+    # Support audio_corpus: redirect to a different corpus's audio directory
+    audio_id = (corpus_meta or {}).get("audio_corpus", corpus.name)
     corpus_root = os.getenv("ASR_CORPUS_ROOT")
     if corpus_root:
-        candidate = Path(corpus_root) / corpus.name / "audio"
+        candidate = Path(corpus_root) / audio_id / "audio"
         if candidate.exists():
             return candidate
-    local = corpus / "audio"
+    local = corpus.parent / audio_id / "audio"
     if local.exists():
         return local
     return None
@@ -79,7 +81,7 @@ def try_fetch_audio(corpus: Path) -> Optional[Path]:
     if result.returncode != 0:
         print(f"  [warn] SFTP fetch failed — to request access: {meta.get('contact', 'see corpus.yaml')}")
         return None
-    return resolve_audio_dir(corpus)
+    return resolve_audio_dir(corpus, meta)
 
 
 def run_asr(system: Path, audio_dir: Path, work_dir: Path, corpus_meta: dict) -> Path:
@@ -186,7 +188,7 @@ def main():
                 shutil.copy(precomputed, work_dir / "hyp.ctm")
                 asr_duration_s = None
             else:
-                audio_dir = resolve_audio_dir(corpus)
+                audio_dir = resolve_audio_dir(corpus, corpus_meta)
                 if audio_dir is None:
                     audio_dir = try_fetch_audio(corpus)
                 if audio_dir is None:
