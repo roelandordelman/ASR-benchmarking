@@ -10,7 +10,7 @@ title: "Whisper large-v3-turbo"
 | **Language** | nl |
 | **Type** | whisper |
 
-OpenAI Whisper large-v3-turbo via faster-whisper. ~8x faster than large-v3 with competitive accuracy.
+OpenAI Whisper large-v3-turbo via faster-whisper (int8 quantization, VAD filter enabled). ~8x faster than large-v3 with competitive accuracy. Audio is pre-segmented using reference STM windows for corpora with partial annotation (e.g. N-Best 2008). Results are fully automated without manual CTM corrections.
 
 ## Results
 

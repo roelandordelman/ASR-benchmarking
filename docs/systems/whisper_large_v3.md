@@ -10,7 +10,7 @@ title: "Whisper large-v3"
 | **Language** | nl |
 | **Type** | whisper |
 
-OpenAI Whisper large-v3 via faster-whisper. Word-level timestamps enable direct CTM output.
+OpenAI Whisper large-v3 via faster-whisper (int8 quantization, VAD filter enabled). Word-level timestamps enable direct CTM output. Audio is pre-segmented using reference STM windows for corpora with partial annotation (e.g. N-Best 2008). Results are fully automated without manual CTM corrections.
 
 ## Results
 

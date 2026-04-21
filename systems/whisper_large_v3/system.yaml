@@ -1,6 +1,6 @@
 id: whisper_large_v3
 name: "Whisper large-v3"
-description: "OpenAI Whisper large-v3 via faster-whisper. Word-level timestamps enable direct CTM output."
+description: "OpenAI Whisper large-v3 via faster-whisper (int8 quantization, VAD filter enabled). Word-level timestamps enable direct CTM output. Audio is pre-segmented using reference STM windows for corpora with partial annotation (e.g. N-Best 2008). Results are fully automated without manual CTM corrections."
 hf_model_id: "openai/whisper-large-v3"
 hf_model_revision: "main"
 language: nl
