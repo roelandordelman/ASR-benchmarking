@@ -16,6 +16,7 @@ OpenAI Whisper large-v3-turbo via faster-whisper (int8 quantization, VAD filter 
 
 | Corpus | WER |
 |--------|-----|
+| [jasmin_nl_compq_nonnative_minors](../corpora/jasmin_nl_compq_nonnative_minors.md) | 27.6% |
 | [nbest2008](../corpora/nbest2008.md) | 16.3% |
 | [nbest2008_mini](../corpora/nbest2008_mini.md) | 16.8% |
 
