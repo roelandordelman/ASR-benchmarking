@@ -1,8 +1,8 @@
 ---
-title: "Jasmin NL comp-q — Native Teenagers"
+title: "Native Teenagers (read speech)"
 ---
 
-# Jasmin NL comp-q — Native Teenagers
+# Native Teenagers (read speech)
 
 | | |
 |---|---|
@@ -10,6 +10,7 @@ title: "Jasmin NL comp-q — Native Teenagers"
 | **Language** | nl |
 | **Size** | 3.68 hours |
 | **License** | restricted |
+
 
 Jasmin corpus, read speech component (comp-q), Dutch, Native Teenagers subset. Subset of jasmin_nl_compq.
 

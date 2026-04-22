@@ -115,6 +115,7 @@ title: "{meta.get('name', corpus_id)}"
 | **Language** | {meta.get('language', '—')} |
 | **Size** | {meta.get('size_hours', '—')} hours |
 | **License** | {meta.get('license', '—')} |
+{f"| **Dataset** | [{meta['dataset']}]({meta['dataset']}.md) |" if meta.get('dataset') else ''}
 
 {meta.get('description', '')}
 

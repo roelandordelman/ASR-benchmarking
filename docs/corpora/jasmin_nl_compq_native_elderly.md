@@ -1,8 +1,8 @@
 ---
-title: "Jasmin NL comp-q — Native Elderly"
+title: "Native Elderly (read speech)"
 ---
 
-# Jasmin NL comp-q — Native Elderly
+# Native Elderly (read speech)
 
 | | |
 |---|---|
@@ -10,6 +10,7 @@ title: "Jasmin NL comp-q — Native Elderly"
 | **Language** | nl |
 | **Size** | 6.39 hours |
 | **License** | restricted |
+
 
 Jasmin corpus, read speech component (comp-q), Dutch, Native Elderly subset. Subset of jasmin_nl_compq.
 

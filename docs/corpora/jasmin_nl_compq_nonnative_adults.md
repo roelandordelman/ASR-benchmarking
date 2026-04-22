@@ -1,8 +1,8 @@
 ---
-title: "Jasmin NL comp-q — Non-native Adults"
+title: "Non-native Adults (read speech)"
 ---
 
-# Jasmin NL comp-q — Non-native Adults
+# Non-native Adults (read speech)
 
 | | |
 |---|---|
@@ -10,6 +10,7 @@ title: "Jasmin NL comp-q — Non-native Adults"
 | **Language** | nl |
 | **Size** | 2.59 hours |
 | **License** | restricted |
+
 
 Jasmin corpus, read speech component (comp-q), Dutch, Non-native Adults subset. Subset of jasmin_nl_compq.
 

@@ -1,5 +1,5 @@
 id: jasmin_nl_compq_native_elderly
-name: Jasmin NL comp-q — Native Elderly
+name: Native Elderly (read speech)
 description: Jasmin corpus, read speech component (comp-q), Dutch, Native Elderly
   subset. Subset of jasmin_nl_compq.
 language: nl
@@ -15,3 +15,4 @@ sftp:
   port: 22
   user: u540409
   path: asr-benchmark/jasmin_nl_compq/audio
+  dataset: jasmin_nl_compq

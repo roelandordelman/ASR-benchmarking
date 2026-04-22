@@ -1,8 +1,8 @@
 ---
-title: "Jasmin NL comp-q — Non-native Minors"
+title: "Non-native Minors (read speech)"
 ---
 
-# Jasmin NL comp-q — Non-native Minors
+# Non-native Minors (read speech)
 
 | | |
 |---|---|
@@ -10,6 +10,7 @@ title: "Jasmin NL comp-q — Non-native Minors"
 | **Language** | nl |
 | **Size** | 2.1 hours |
 | **License** | restricted |
+
 
 Jasmin corpus, read speech component (comp-q), Dutch, Non-native Minors subset. Subset of jasmin_nl_compq.
 
