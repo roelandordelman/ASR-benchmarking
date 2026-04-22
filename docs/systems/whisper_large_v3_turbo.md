@@ -2,6 +2,8 @@
 title: "Whisper large-v3-turbo"
 ---
 
+[Systems](index.md)
+
 # Whisper large-v3-turbo
 
 | | |
@@ -16,12 +18,7 @@ OpenAI Whisper large-v3-turbo via faster-whisper (int8 quantization, VAD filter 
 
 | Corpus | WER |
 |--------|-----|
-| [jasmin_nl_compq_native_elderly](../corpora/jasmin_nl_compq_native_elderly.md) | 11.6% |
-| [jasmin_nl_compq_native_teens](../corpora/jasmin_nl_compq_native_teens.md) | 10.6% |
-| [jasmin_nl_compq_nonnative_adults](../corpora/jasmin_nl_compq_nonnative_adults.md) | 28.6% |
-| [jasmin_nl_compq_nonnative_minors](../corpora/jasmin_nl_compq_nonnative_minors.md) | 27.6% |
-| [nbest2008](../corpora/nbest2008.md) | 16.3% |
-| [nbest2008_mini](../corpora/nbest2008_mini.md) | 16.8% |
+| [Native Elderly (read speech)](../corpora/jasmin_nl_compq_native_elderly.md) | 11.6% || [Native Teenagers (read speech)](../corpora/jasmin_nl_compq_native_teens.md) | 10.6% || [Non-native Adults (read speech)](../corpora/jasmin_nl_compq_nonnative_adults.md) | 28.6% || [Non-native Minors (read speech)](../corpora/jasmin_nl_compq_nonnative_minors.md) | 27.6% || [Broadcast News NL (N-Best 2008)](../corpora/nbest2008.md) | 16.3% || [Broadcast News NL Mini (N-Best 2008)](../corpora/nbest2008_mini.md) | 16.8% |
 
 ## Hardware
 

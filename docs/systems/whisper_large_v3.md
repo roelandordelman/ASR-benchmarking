@@ -2,6 +2,8 @@
 title: "Whisper large-v3"
 ---
 
+[Systems](index.md)
+
 # Whisper large-v3
 
 | | |
@@ -16,9 +18,7 @@ OpenAI Whisper large-v3 via faster-whisper (int8 quantization, VAD filter enable
 
 | Corpus | WER |
 |--------|-----|
-| [example](../corpora/example.md) | 7.5% |
-| [nbest2008](../corpora/nbest2008.md) | 17.6% |
-| [nbest2008_mini](../corpora/nbest2008_mini.md) | 17.5% |
+| [Example Corpus (ASR_NL_benchmark)](../corpora/example.md) | 7.5% || [Broadcast News NL (N-Best 2008)](../corpora/nbest2008.md) | 17.6% || [Broadcast News NL Mini (N-Best 2008)](../corpora/nbest2008_mini.md) | 17.5% |
 
 ## Hardware
 

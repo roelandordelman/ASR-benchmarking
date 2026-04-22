@@ -2,17 +2,18 @@
 title: "Native Teenagers (read speech)"
 ---
 
+[Datasets](../datasets/) › [Jasmin-CGN](../datasets/jasmin.md) › [Jasmin NL — Read Speech (comp-q)](jasmin_nl_compq.md)
+
 # Native Teenagers (read speech)
 
 | | |
 |---|---|
-| **Domain** | read_speech |
+| **Domain** | read speech |
 | **Language** | nl |
 | **Size** | 3.68 hours |
 | **License** | restricted |
 
-
-Jasmin corpus, read speech component (comp-q), Dutch, Native Teenagers subset. Subset of jasmin_nl_compq.
+Jasmin corpus, read speech component (comp-q), Dutch, Native Teenagers subset (ages 12–16). Subset of jasmin_nl_compq.
 
 
 
@@ -20,4 +21,4 @@ Jasmin corpus, read speech component (comp-q), Dutch, Native Teenagers subset. S
 
 | System | WER |
 |--------|-----|
-| [whisper_large_v3_turbo](../systems/whisper_large_v3_turbo.md) | 10.6% |
+| [Whisper large-v3-turbo](../systems/whisper_large_v3_turbo.md) | 10.6% |

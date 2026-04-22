@@ -1,4 +1,8 @@
+---
+title: Systems
+---
+
 # Systems
 
-- [whisper_large_v3](whisper_large_v3.md)
-- [whisper_large_v3_turbo](whisper_large_v3_turbo.md)
+- [Whisper large-v3](whisper_large_v3.md)
+- [Whisper large-v3-turbo](whisper_large_v3_turbo.md)

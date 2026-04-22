@@ -5,4 +5,5 @@ language: nl
 domain: broadcast_news
 size_hours: 0.03
 license: "example only — do not use for published benchmarks"
+exclude_from_matrix: true
 audio_path: "${ASR_CORPUS_ROOT}/example/audio"

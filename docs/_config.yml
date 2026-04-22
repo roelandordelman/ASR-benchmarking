@@ -6,7 +6,7 @@ show_excerpts: false
 
 header_pages:
   - index.md
-  - corpora/index.md
+  - datasets/index.md
   - systems/index.md
 
 minima:

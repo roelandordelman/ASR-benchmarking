@@ -6,11 +6,17 @@ title: ASR NL Benchmark Results
 
 *Lower is better. Generated 2026-04-22.*
 
-| System | [Example Corpus (ASR_NL_benchmark)](corpora/example.md) | [Native Elderly (read speech)](corpora/jasmin_nl_compq_native_elderly.md) | [Native Teenagers (read speech)](corpora/jasmin_nl_compq_native_teens.md) | [Non-native Adults (read speech)](corpora/jasmin_nl_compq_nonnative_adults.md) | [Non-native Minors (read speech)](corpora/jasmin_nl_compq_nonnative_minors.md) | [Broadcast News NL (N-Best 2008)](corpora/nbest2008.md) | [Broadcast News NL Mini (N-Best 2008)](corpora/nbest2008_mini.md) |
-|-------|-------|-------|-------|-------|-------|-------|-------|
-| [Whisper large-v3](systems/whisper_large_v3.md) | 7.5% | — | — | — | — | 17.6% | 17.5% |
-| [Whisper large-v3-turbo](systems/whisper_large_v3_turbo.md) | — | 11.6% | 10.6% | 28.6% | 27.6% | 16.3% | 16.8% |
+<table>
+<thead>
+<tr><th rowspan="2" style="text-align:left">System</th><th colspan="2" style="text-align:center"><a href="datasets/nbest2008.md">N-Best 2008</a></th><th colspan="4" style="text-align:center"><a href="datasets/jasmin.md">Jasmin-CGN</a></th></tr>
+<tr><th style="text-align:center"><a href="corpora/nbest2008.md">BN-NL Full</a></th><th style="text-align:center"><a href="corpora/nbest2008_mini.md">BN-NL Mini</a></th><th style="text-align:center"><a href="corpora/jasmin_nl_compq_native_teens.md">Native Teens</a></th><th style="text-align:center"><a href="corpora/jasmin_nl_compq_native_elderly.md">Native Elderly</a></th><th style="text-align:center"><a href="corpora/jasmin_nl_compq_nonnative_adults.md">Non-native Adults</a></th><th style="text-align:center"><a href="corpora/jasmin_nl_compq_nonnative_minors.md">Non-native Minors</a></th></tr>
+</thead>
+<tbody>
+<tr><td><a href="systems/whisper_large_v3.md">Whisper large-v3</a></td><td style="text-align:center">17.6%</td><td style="text-align:center">17.5%</td><td style="text-align:center">—</td><td style="text-align:center">—</td><td style="text-align:center">—</td><td style="text-align:center">—</td></tr>
+<tr><td><a href="systems/whisper_large_v3_turbo.md">Whisper large-v3-turbo</a></td><td style="text-align:center">16.3%</td><td style="text-align:center">16.8%</td><td style="text-align:center">10.6%</td><td style="text-align:center">11.6%</td><td style="text-align:center">28.6%</td><td style="text-align:center">27.6%</td></tr>
+</tbody>
+</table>
 
 ---
 
-Browse details by [corpus](corpora/) or [system](systems/).
+Browse details by [dataset](datasets/) or [system](systems/).

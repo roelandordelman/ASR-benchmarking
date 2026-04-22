@@ -1,0 +1,22 @@
+id: jasmin
+name: "Jasmin-CGN"
+full_name: "Jasmin-CGN (Dutch Speech Database)"
+description: >
+  The Jasmin-CGN corpus is a large Dutch speech database containing read speech
+  and human-machine interaction (HMI) speech from diverse speaker groups:
+  native children (7–11), native teenagers (12–16), non-native minors (7–16),
+  non-native adults (18–60, CEFR A1–B2), and native elderly (65+).
+  Collected jointly by multiple Dutch and Belgian research groups.
+  Particularly challenging for ASR due to child speech, non-native accents,
+  and spontaneous HMI dialogue.
+url: "https://taalmaterialen.ivdnt.org/download/tstc-jasmin-cgn/"
+language: nl
+license: restricted
+display_order: 2
+corpus_order:
+  - jasmin_nl_compq
+  - jasmin_nl_compq_native_children
+  - jasmin_nl_compq_native_teens
+  - jasmin_nl_compq_native_elderly
+  - jasmin_nl_compq_nonnative_adults
+  - jasmin_nl_compq_nonnative_minors

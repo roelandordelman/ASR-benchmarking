@@ -1,9 +1,11 @@
 id: jasmin_nl_compq
-name: "Jasmin-CGN NL — Read Speech (comp-q)"
+name: "Jasmin NL — Read Speech (comp-q)"
+matrix_label: "All groups (21h)"
+dataset: jasmin
 description: >
   Dutch read speech from Jasmin-CGN. All 5 speaker groups:
-  native children (7-11), native teens (12-16), non-native minors (7-16),
-  non-native adults (18-60, CEF A1-B2), native elderly (65+).
+  native children (7–11), native teens (12–16), non-native minors (7–16),
+  non-native adults (18–60, CEFR A1–B2), native elderly (65+).
   STM category tags encode component, group, and gender for per-category WER.
 language: nl
 domain: read_speech
