@@ -21,4 +21,4 @@ Jasmin corpus, read speech component (comp-q), Dutch, Non-native Minors subset (
 
 | System | WER |
 |--------|-----|
-| [Whisper large-v3-turbo](../systems/whisper_large_v3_turbo.md) | 27.6% |
+| [Whisper large-v3-turbo (int8)](../systems/whisper_large_v3_turbo.md) | 27.6% |

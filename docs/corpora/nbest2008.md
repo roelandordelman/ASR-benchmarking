@@ -27,5 +27,5 @@ Dutch broadcast news evaluation corpus from the N-Best 2008 evaluation campaign.
 
 | System | WER |
 |--------|-----|
-| [Whisper large-v3](../systems/whisper_large_v3.md) | 17.6% |
-| [Whisper large-v3-turbo](../systems/whisper_large_v3_turbo.md) | 16.3% |
+| [Whisper large-v3 (int8)](../systems/whisper_large_v3.md) | 17.6% |
+| [Whisper large-v3-turbo (int8)](../systems/whisper_large_v3_turbo.md) | 16.3% |

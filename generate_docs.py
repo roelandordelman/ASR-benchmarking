@@ -74,6 +74,15 @@ def load_system_metas() -> dict:
     return metas
 
 
+def system_matrix_label(sys_meta: dict) -> str:
+    """Label for WER matrix row header: name + compute type if known."""
+    name = sys_meta.get("name", sys_meta.get("id", "?"))
+    ct = (sys_meta.get("config") or {}).get("compute_type")
+    if ct:
+        return f"{name} ({ct})"
+    return name
+
+
 def matrix_label(corpus_meta: dict) -> str:
     """Short label for the WER matrix column header."""
     if corpus_meta.get("matrix_label"):
@@ -144,7 +153,7 @@ def write_index(systems, dataset_groups, wer, corpora, datasets, system_metas):
     rows = []
     for sys_id in systems:
         sm = system_metas.get(sys_id, {})
-        sys_label = sm.get("name", sys_id)
+        sys_label = system_matrix_label(sm)
         cells = [f'<td><a href="systems/{sys_id}.md">{sys_label}</a></td>']
         for cid in all_corpus_ids:
             v = wer.get((sys_id, cid))
@@ -171,6 +180,10 @@ title: ASR NL Benchmark Results
 *Lower is better. Generated {datetime.now().strftime('%Y-%m-%d')}.*
 
 {table}
+
+> **Note on quantization:** compute type (e.g. int8 vs float16) materially affects WER —
+> typically 2–4 points on challenging speech. It is shown in the System column for each entry.
+> See individual [system pages](systems/) for the full inference configuration.
 
 ---
 
@@ -240,9 +253,9 @@ def write_dataset_pages(datasets, corpora, summaries):
                     fmt_wer(wer[(sys_id, c)]) if (sys_id, c) in wer else "—"
                     for c in ds_corpora
                 ]
-                sys_name = sys_metas.get(sys_id, {}).get("name", sys_id)
+                sys_label = system_matrix_label(sys_metas.get(sys_id, {}))
                 result_rows.append(
-                    f"| [{sys_name}](../systems/{sys_id}.md) | " + " | ".join(cells) + " |"
+                    f"| [{sys_label}](../systems/{sys_id}.md) | " + " | ".join(cells) + " |"
                 )
             results_section = (
                 f"## Results\n\n| System | {col_hdrs} |\n|{sep}|\n"
@@ -331,7 +344,7 @@ def write_corpus_pages(summaries, corpora, datasets):
         # Results table (direct results on this corpus)
         if corpus_id in active:
             result_rows = [
-                f"| [{sys_metas.get(sid, {}).get('name', sid)}](../systems/{sid}.md)"
+                f"| [{system_matrix_label(sys_metas.get(sid, {}))}](../systems/{sid}.md)"
                 f" | {fmt_wer(wer[(sid, corpus_id)])} |"
                 for sid in systems
                 if (sid, corpus_id) in wer
@@ -402,6 +415,27 @@ title: "{cm.get('name', corpus_id)}"
 
 # ── System pages ──────────────────────────────────────────────────────────────
 
+def _fmt_config(cfg: dict) -> str:
+    if not cfg:
+        return ""
+    labels = [
+        ("library",                  "Inference library"),
+        ("compute_type",             "Compute type"),
+        ("device",                   "Device"),
+        ("beam_size",                "Beam size"),
+        ("vad_filter",               "VAD filter"),
+        ("condition_on_previous_text", "Condition on prev. text"),
+        ("word_timestamps",          "Word timestamps"),
+        ("language",                 "Language hint"),
+    ]
+    lines = ["## Configuration\n\n| | |", "|---|---|"]
+    for key, label in labels:
+        val = cfg.get(key)
+        if val is not None:
+            lines.append(f"| **{label}** | {val} |")
+    return "\n".join(lines)
+
+
 def _fmt_hardware(hw: dict) -> str:
     if not hw:
         return ""
@@ -442,6 +476,7 @@ def write_system_pages(summaries, system_metas, corpora):
         hw = next((s.get("hardware", {}) for s in reversed(sys_summaries)), {})
         hf = sm.get("hf_model_id", "")
         hf_link = f"[{hf}](https://huggingface.co/{hf})" if hf else "—"
+        cfg_section = _fmt_config(sm.get("config", {}))
         hw_section = _fmt_hardware(hw)
 
         content = f"""---
@@ -465,6 +500,8 @@ title: "{sm.get('name', sys_id)}"
 | Corpus | WER |
 |--------|-----|
 {"".join(rows)}
+
+{cfg_section}
 
 {hw_section}
 """

@@ -26,5 +26,5 @@ The N-Best 2008 evaluation campaign corpus for Dutch broadcast news ASR. Contain
 
 | System | [BN-NL Full](../corpora/nbest2008.md) | [BN-NL Mini](../corpora/nbest2008_mini.md) |
 |---|---|---|
-| [Whisper large-v3](../systems/whisper_large_v3.md) | 17.6% | 17.5% |
-| [Whisper large-v3-turbo](../systems/whisper_large_v3_turbo.md) | 16.3% | 16.8% |
+| [Whisper large-v3 (int8)](../systems/whisper_large_v3.md) | 17.6% | 17.5% |
+| [Whisper large-v3-turbo (int8)](../systems/whisper_large_v3_turbo.md) | 16.3% | 16.8% |

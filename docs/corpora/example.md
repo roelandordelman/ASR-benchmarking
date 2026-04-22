@@ -21,4 +21,4 @@ Small broadcast-news excerpt bundled with the ASR_NL_benchmark evaluation tool. 
 
 | System | WER |
 |--------|-----|
-| [Whisper large-v3](../systems/whisper_large_v3.md) | 7.5% |
+| [Whisper large-v3 (int8)](../systems/whisper_large_v3.md) | 7.5% |

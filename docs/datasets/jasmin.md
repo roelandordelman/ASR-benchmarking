@@ -30,5 +30,5 @@ The Jasmin-CGN corpus is a large Dutch speech database containing read speech an
 
 | System | [Native Teens](../corpora/jasmin_nl_compq_native_teens.md) | [Native Elderly](../corpora/jasmin_nl_compq_native_elderly.md) | [Non-native Adults](../corpora/jasmin_nl_compq_nonnative_adults.md) | [Non-native Minors](../corpora/jasmin_nl_compq_nonnative_minors.md) |
 |---|---|---|---|---|
-| [Whisper large-v3](../systems/whisper_large_v3.md) | — | — | — | — |
-| [Whisper large-v3-turbo](../systems/whisper_large_v3_turbo.md) | 10.6% | 11.6% | 28.6% | 27.6% |
+| [Whisper large-v3 (int8)](../systems/whisper_large_v3.md) | — | — | — | — |
+| [Whisper large-v3-turbo (int8)](../systems/whisper_large_v3_turbo.md) | 10.6% | 11.6% | 28.6% | 27.6% |

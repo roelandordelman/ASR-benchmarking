@@ -23,5 +23,5 @@ title: "Broadcast News NL Mini (N-Best 2008)"
 
 | System | WER |
 |--------|-----|
-| [Whisper large-v3](../systems/whisper_large_v3.md) | 17.5% |
-| [Whisper large-v3-turbo](../systems/whisper_large_v3_turbo.md) | 16.8% |
+| [Whisper large-v3 (int8)](../systems/whisper_large_v3.md) | 17.5% |
+| [Whisper large-v3-turbo (int8)](../systems/whisper_large_v3_turbo.md) | 16.8% |
