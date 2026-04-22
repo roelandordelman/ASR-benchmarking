@@ -1,0 +1,25 @@
+{
+  "overall_wer": 10.56,
+  "categories": [
+    {
+      "category": "hyp",
+      "ref_words": 41502,
+      "WER": 10.56
+    }
+  ],
+  "system": "whisper_large_v3_turbo",
+  "corpus": "jasmin_nl_compq_native_teens",
+  "timestamp": "2026-04-21T20:10:10.279981+00:00",
+  "rtf": 0.25,
+  "hardware": {
+    "os": "Darwin 25.4.0",
+    "arch": "arm64",
+    "python": "3.9.6",
+    "model": "MacBook Pro (Mac16,8)",
+    "chip": "Apple M4 Pro",
+    "cores": "14-core (10P+4E)",
+    "ram_gb": "48",
+    "device": "cpu (Apple Accelerate/AMX)",
+    "ctranslate2": "4.7.1"
+  }
+}
