@@ -32,6 +32,23 @@ def fmt_wer(v: float) -> str:
     return f"{v:.1f}%"
 
 
+def load_display_names() -> tuple[dict, dict]:
+    """Load human-friendly names from corpus.yaml and system.yaml files."""
+    corpus_names = {}
+    for p in CORPORA_DIR.glob("*/corpus.yaml"):
+        meta = load_yaml(p)
+        if meta.get("id") and meta.get("name"):
+            corpus_names[meta["id"]] = meta["name"]
+
+    system_names = {}
+    for p in SYSTEMS_DIR.glob("*/system.yaml"):
+        meta = load_yaml(p)
+        if meta.get("id") and meta.get("name"):
+            system_names[meta["id"]] = meta["name"]
+
+    return corpus_names, system_names
+
+
 def build_matrix(summaries):
     systems = sorted({s["system"] for s in summaries})
     corpora = sorted({s["corpus"] for s in summaries})
@@ -39,13 +56,14 @@ def build_matrix(summaries):
     return systems, corpora, wer
 
 
-def write_index(systems, corpora, wer):
-    cols = " | ".join(f"[{c}](corpora/{c}.md)" for c in corpora)
+def write_index(systems, corpora, wer, corpus_names, system_names):
+    cols = " | ".join(f"[{corpus_names.get(c, c)}](corpora/{c}.md)" for c in corpora)
     sep  = "|".join(["-------"] * (len(corpora) + 1))
     rows = []
     for sys in systems:
         cells = [fmt_wer(wer[(sys, c)]) if (sys, c) in wer else "—" for c in corpora]
-        rows.append(f"| [{sys}](systems/{sys}.md) | " + " | ".join(cells) + " |")
+        sys_label = system_names.get(sys, sys)
+        rows.append(f"| [{sys_label}](systems/{sys}.md) | " + " | ".join(cells) + " |")
 
     content = f"""---
 title: ASR NL Benchmark Results
@@ -179,8 +197,9 @@ def main():
         return
 
     systems, corpora, wer = build_matrix(summaries)
+    corpus_names, system_names = load_display_names()
     print(f"Generating docs for {len(systems)} system(s), {len(corpora)} corpus/corpora...")
-    write_index(systems, corpora, wer)
+    write_index(systems, corpora, wer, corpus_names, system_names)
     write_corpus_index(corpora)
     write_system_index(systems)
     write_corpus_pages(summaries, corpora)
